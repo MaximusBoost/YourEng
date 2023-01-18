@@ -1,0 +1,38 @@
+:root {
+    --color-green-light: #009C68;
+    --color-green-dark: #005C3D;
+    --color-black-dark: #0E110D;
+    --color-black-light: #3D3D3D;
+    --color-grey-dark: #878787;
+    --color-grey-light: #CAC8C8;
+    --color-white: #F7F8F7;
+    
+    --font-family: 'Montserrat', sans-serif;
+    --font-size-h1: 40px;
+    --font-size-h2: 35px;
+    --font-size-h3: 25px;
+    --font-size-text: 20px;
+    --font-size-names_of_card: 20px;
+    --font-size-text-in-c-btn: 15px;
+
+    --font-weight-h1-h2-h3: 700;
+    --font-weight-text: 400;
+    --font-weight-names_of_card: 600;
+    --font-weight-text-in-c-btn: 400;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.main {
+    width: 1400px;
+    height: 100vh;
+    background-color: var(--color-grey-dark);
+    margin: auto;
+    font-family: var(--font-family);
+}
