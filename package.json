@@ -1,0 +1,14 @@
+{
+  "name": "youreng",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "parcel index.html --open",
+    "build": "parcel build index.html --no-source-maps --no-cache --public-url ."
+  },
+  "author": "bekandmov",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5",
+    "sass": "^1.57.1"
+  }
+}
