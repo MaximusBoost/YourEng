@@ -1,0 +1,57 @@
+.learning-wrapper{
+    background-color: $color-white;
+}
+
+.learning_title{
+    padding-top: 60px;
+    h2{
+        font-size: 45px;
+        font-weight: 700;
+    }
+}
+.learning_content{
+    display: flex;
+    ol{
+        counter-reset: ol-numbers;
+        li:last-child{
+            padding-bottom: 60px;
+        }
+        li{
+            position: relative;
+            padding-left: 65px;
+            &::before{
+                counter-increment: ol-numbers;
+                content: counter(ol-numbers) ".";
+                position: absolute;
+                left: 0;
+                top: 45px;
+
+                font-weight: 700;
+                font-size: 60px;
+                color: $color-green-dark;
+            }
+        }
+    }
+    .learning_image{
+        padding: 67px 0 0 76px;
+        img{
+            max-width: 100%;
+        }
+    }
+}
+
+.learning_content-block{
+    padding-top: 62px;
+    h3{
+        display: inline-block;
+        font-weight: 700;
+        font-size: 25px;
+    }
+    p{
+        padding-top: 20px;
+        font-weight: 400;
+        font-size: 18px;
+        max-width: 427px;
+        line-height: 140%;
+    }
+}

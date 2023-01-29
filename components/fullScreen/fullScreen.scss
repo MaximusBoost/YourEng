@@ -1,25 +1,41 @@
-.full-screen {
+.full-screen-wrapper{
+    height: 100vh;
     width: 100%;
-    height: 616px;
-    background-color: var(--color-black-dark);
+    background-color: $color-black-dark;
+}
+
+.full-screen{
+    min-height: 100vh;
+    max-width: 1160px;
+    margin: 0 auto;
+    
+}
+
+.full-screen-content {
+    width: 100%;
+    height: 100%;
     display: flex;
+    justify-content: space-between;
+    margin: 0 15px;
+    @media (max-width:1140px) {
+        justify-content: space-around;
+    }
 }
 
 .full-screen__left-part {
-    /* background-color: aqua; */
-    width: 50%;
+    max-width: 50%;
     height: 100%;
-    color: var(--color-white);
+    color: $color-white;
+    padding-top: 135px;
+    @media(max-width:1140px) {
+        padding-top: 68px;
+    }
 }
 
 .full-screen_read-area {
-    position: relative;
-    top: 135px;
-    left: 150px;
     display: flex;
     flex-direction: column;
     gap: 20px 0;
-    width: 442px
 }
 
 .full-screen__text-big {
@@ -28,113 +44,99 @@
     font-weight: 700;
     font-size: 50px;
     line-height: 61px;
-    width: 442px;
+    @media(max-width:1140px) {
+        font-size: 40px;
+        line-height: 50px;
+    }
 }
 
 .full-screen__text-small {
-font-family: 'Montserrat';
-font-style: normal;
-font-weight: var(--font-weight-text-in-c-btn);
-font-size: var(--font-size-text-in-c-btn);
-line-height: 18px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: $font-weight-text-in-c-btn;
+    font-size: $font-size-text-in-c-btn;
+    line-height: 18px;
 }
-
-.full-screen__button {
-    width: 189px;
-    height: 48px;
-    background-color: var(--color-green-light);
-    color: var(--color-white);
-    text-decoration: none;
-    border-radius: 5px;
-    
-}
-
-.full-screen__button-p {
-    position: relative;
-    left: 50px;
-    top: 15px;
-}
-
 .full-screen__right-part {
-    /* background-color: blueviolet; */
     width: 50%;
     height: 100%;
+    padding-top: 68px;
+    @media(max-width:1140px) {
+        padding-top: 34px;
+    }
 }
 
 .full-screen__flex-box {
-    position: relative;
-    top: 68px;
-
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items: space-between;
     align-content: space-between;
-
-    width: 565px;
-    height: 480px;
+    @media(max-width: 1140px) {
+        .image-box-1,.image-box-4,.image-box-5{
+            display: none;
+        }
+        justify-content: center;
+    }
 }
 
-
-.red-box-1 {
+.image-box-1 {
     width: 200px;
-    height: 150px;
-    background-color: red;
-    border-radius: 200px 200px 200px 0px;
-
-    background-color: var(--color-green-light);
+    border-radius: 100% 100% 100% 0;
+    background-color: $color-green-light;
+    margin-bottom: 15px ;
 }
 
 .full-screen__span {
     position: relative;
     left: 46px;
     top: 62.26px;
-
     font-style: normal;
-    font-weight: var(--font-weight-h1-h2-h3);
+    font-weight: $font-weight-h1-h2-h3;
     font-size: 21.5537px;
     line-height: 26px;
     letter-spacing: 0.1em;
-
-    color: var(--color-white);
+    color: $color-white;
+}
+.full-screen__link-size{
+    width: 189px;
+    height: 48px;
 }
 
-.red-box-2 {
+.image-box-2 {
     width: 350px;
     height: 150px;
     border-radius: 200px;
-
-    background-image: url(./img/1_img.png);
+    background-image: url(~/components/fullScreen/img/img_1.png);
+    margin: 0 15px 15px 0;
 }
 
-.red-box-3 {
+.image-box-3 {
     width: 350px;
     height: 150px;
     border-radius: 200px;
-
-    background-image: url(./img/2_img.png);
+    background-image: url(~/components/fullScreen/img/img_2.png);
+    margin-bottom: 15px;
 }
-.red-box-4 {
+.image-box-4 {
     width: 200px;
     height: 150px;
     border-radius: 200px 200px 200px 0px;
     border-radius: 200px 0px 200px 200px;
-
-    background-image: url(./img/3_img.png);
+    background-image: url(~/components/fullScreen/img/img_3.png);
+    margin: 0 15px 15px 0;
 }
-.red-box-5 {
+.image-box-5 {
     width: 200px;
     height: 150px;
     border-radius: 200px 200px 200px 0px;
     border-radius: 200px;
-
-    background-image: url(./img/4_img.png);
+    background-image: url(~/components/fullScreen/img/img_4.png);
 }
-.red-box-6 {
+.image-box-6 {
     width: 350px;
     height: 150px;
     border-radius: 0px 200px 200px 400px;
-
-    background-image: url(./img/5_img.png);
+    background-image: url(~/components/fullScreen/img/img_5.png);
+    margin-right: 15px;
 }

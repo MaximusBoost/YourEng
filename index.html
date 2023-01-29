@@ -7,10 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./constants/root.scss">
-    <link rel="stylesheet" href="./components/1header/header.scss">
-    <link rel="stylesheet" href="./components/fullScreen/fullScreen.scss">
-    <!-- <link rel="stylesheet" href="index.css"> -->
+    <link rel="stylesheet" href="./index.scss">
     <link rel="icon" href="./img/tv.svg">
     <title>YourEng</title>
 </head>
@@ -18,49 +15,201 @@
 
     <div class="main">
 
-        <div class="header">
 
-            <div class="header__logo">
-                <span>Your</span><span class="header__span-green">Eng</span></div>
-            <div class="header__medium-text">
-                <span>Курсы</span><span>Преподаватели</span><span>Мероприятия</span>
-            </div>
-            <div class="header__personal-cabinet">Личный кабинет</div>
 
-        </div>
-
-        <div class="full-screen">
-
-            <div class="full-screen__left-part">
-                
-                <div class="full-screen_read-area">
-                    <p class="full-screen__text-big">Учи английский<br>c современной<br>онлайн школой</p>
-                    <p class="full-screen__text-small">Запишитесь на бесплатное пробное<br>занятие и познакомьтесь c YourEng</p>
-                    <a href="#" class="full-screen__button"><span class="full-screen__button-p">Записаться</span></a>
-                </div>
-
-            </div>
-
-            <div class="full-screen__right-part">
-
-                <div class="full-screen__flex-box">
-                    <div class="red-box-1">
-                        <span class="full-screen__span">YourEng</span>
+        <div class="full-screen-wrapper">
+            <div class="full-screen">
+                <div class="header">
+                    <div class="header__logo" >
+                        <span>Your</span><span class="header__span-green">Eng</span>
                     </div>
-                    <div class="red-box-2"></div>
-                    <div class="red-box-3"></div>
-                    <div class="red-box-4"></div>
-                    <div class="red-box-5"></div>
-                    <div class="red-box-6"></div>
+                    <div class="header__medium-text">
+                        <a href="#">Курсы</a><a href="#">Преподаватели</a><a href="#">Мероприятия</a>
+                    </div>
+                    <div class="header__personal-cabinet">Личный кабинет</div>
+
                 </div>
 
+                <div class="full-screen-content">
+
+                    <div class="full-screen__left-part">
+                        
+                        <div class="full-screen_read-area">
+                            <p class="full-screen__text-big">Учи английский<br>c современной<br>онлайн школой</p>
+                            <p class="full-screen__text-small">Запишитесь на бесплатное пробное<br>занятие и познакомьтесь c YourEng</p>
+                            <a href="#" class="_link-green full-screen__link-size"><span>Записаться</span></a>
+                        </div>
+
+                    </div>
+
+                    <div class="full-screen__right-part">
+
+                        <div class="full-screen__flex-box">
+                            <div class="image-box-1">
+                                <span class="full-screen__span">YourEng</span>
+                            </div>
+                            <div class="image-box-2"></div>
+                            <div class="image-box-3"></div>
+                            <div class="image-box-4"></div>
+                            <div class="image-box-5"></div>
+                            <div class="image-box-6"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
-
         </div>
 
-        <div class="about-us-section">
 
+
+        <div class="learning-wrapper _container">
+            <div class="learning_title">
+                <h2>Как проходит обучение</h2>
+            </div>
+            <div class="learning_content">
+                <ol>
+                    <li class="learning_content-block">
+                        <h3>Выбор даты</h3>
+                        <p>Сначала вы выбираете удобную для вас дату.
+                            Вcе курсы на YourEng проходят 
+                            в комфортном для вас темпе.</p>
+                    </li>
+                    <li class="learning_content-block">
+                        <h3>Онлайн-занятие</h3>
+                        <p>Все занятия проходят по Skype. и длятся 50 минут, из них  20 минут уделяется теории, большая часть занятия отводится на разговорную практику. 
+                        </p>
+                    </li>
+                    <li class="learning_content-block">
+                        <h3>Домашнее задание</h3>
+                        <p>После каждого занятия вам дается домашнее
+                            задание, в которое входят, в зависимости от 
+                            пройденного материала, тесты, таблицы, новые 
+                            слова и устойчивые выражения.</p>
+                    </li>
+                </ol>
+    
+                <div class="learning_image">
+                        <img src="./components/learning/img/photo.png" alt="learning photo">  
+                </div>
+                <div class="learning_tips hidden">
+            
+                </div>
+            </div>
         </div>
+
+
+
+        <div class="teachers _container">
+            <div class="teachers__title">Наши преподаватели</div>
+            <div class="teachers__content">
+                <div class="teachers__descriptions">
+                    <p>В команде YourEng только 
+                    преподаватели с опытом работы 
+                    не менее трех лет, практикующие 
+                    специалисты постоянно 
+                    совершенствуют свои навыки, 
+                    всегда быстро и доходчиво 
+                    отвечают на возникающие
+                    у учеников вопросы.</p>
+                    <p>Хотите заниматься с носителем 
+                    языка? На YourEng есть такая 
+                    возможность.</p>
+                    <p>Вы можете подобрать себе 
+                    преподавателя сами или доверить 
+                    это нашей команде. 
+                    Мы подберем вам специалиста 
+                    исходя из ваших потребностей.</p>
+                    <a href="#" class="_link-green teachers__link-size"><span class="">Все преподаватели</span></a>
+                </div>
+                <div class="teachers__our-teacher-container">
+                    <div class="teachers__our-teacher">
+                        <img src="./components/teachers/img/alex.png" alt="alex">
+                        <div class="teachers__short-description">
+                            <h4 class="teachers__name">Алексей</h4>
+                            <span class="teachers__inf">Русскоговорящий преподаватель 
+                                с опытом работы более 9 лет.</span>
+                        </div>
+                        <img src="./components/teachers/img/Vector.svg" alt="arrow down" id="vector1">
+                    </div>
+
+                    <div class="teachers__our-teacher">
+                        <img src="./components/teachers/img/kevin.png" alt="alex">
+                        <div class="teachers__short-description">
+                            <h4 class="teachers__name">Кевин</h4>
+                            <span class="teachers__inf">Носитель языка с опытом работы более 5 лет.</span>
+                        </div>
+                        <img src="./components/teachers/img/Vector.svg" alt="arrow down" id="vector2">
+                    </div>
+
+                    <div class="teachers__our-teacher">
+                        <img src="./components/teachers/img/anna.png" alt="alex">
+                        <div class="teachers__short-description">
+                            <h4 class="teachers__name">Анна</h4>
+                            <span class="teachers__inf">Русскоговорящий преподаватель 
+                                с опытом работы более 7 лет.</span>
+                        </div>
+                        <img src="./components/teachers/img/Vector.svg" alt="arrow down" id="vector3">
+                    </div>
+
+                    <div class="teachers__our-teacher">
+                        <img src="./components/teachers/img/klifford.png" alt="alex">
+                        <div class="teachers__short-description">
+                            <h4 class="teachers__name">Клиффорд</h4>
+                            <span class="teachers__inf">Носитель языка с опытом работы более 3 лет.</span>
+                        </div>
+                        <img src="./components/teachers/img/Vector.svg" alt="arrow down" id="vector4">
+                    </div>
+                </div>
+            </div>
+        </div>
+            
+
+
+        <div class="programms _container">
+            <h2 class="programms__title">Программы</h2>
+            <p class="programms__questions">
+                Делаете первые шаги в изучении языка? Или уже имеете багаж знаний? 
+                Хотите выучить английский для путешествий? Или подготовиться к ЕГЭ? 
+                На YourEng вы найдете себе программу для любого уровня и жизненной ситуации.
+            </p>
+            <div class="programms__cards">
+                <div class="programms__card">
+                    <h4 class="programms__card-title">Английский для путешествий</h4>
+                    <img src="./components/programms/img/church.png" alt="some perfect image">
+                    <p class="programms__card-text">Ничего лишнего! В программе делается 
+                        упор на знания, которые будут необходимы для посещения англоязычных стран</p>
+                    <div class="programms__card-footer">
+                        <p class="programms__card-cost">от <span>600 руб.</span>
+                            за занятие</p>
+                        <button class="_button-white">Подробнее</button>
+                    </div>
+                </div>
+
+                <div class="programms__card">
+                    <h4 class="programms__card-title">Бизнес-английский</h4>
+                    <img src="./components/programms/img/discussion.png" alt="some discussion">
+                    <p class="programms__card-text">Развиваем языковые навыки делового общения: составление резюме, ведение переписки, участие в переговорах</p>
+                    <div class="programms__card-footer">
+                        <p class="programms__card-cost">от <span>600 руб.</span>
+                            за занятие</p>
+                        <button class="_button-white">Подробнее</button>
+                    </div>
+                </div>
+
+                <div class="programms__card">
+                    <h4 class="programms__card-title">IT-английский</h4>
+                    <img src="./components/programms/img/coding.png" alt="coding">
+                    <p class="programms__card-text">Техническую лексику из области программирования, веб-дизайна, тестирования, аналитики и других направлений IT </p>
+                    <div class="programms__card-footer">
+                        <p class="programms__card-cost">от <span>600 руб.</span>
+                            за занятие</p>
+                        <button class="_button-white">Подробнее</button>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="_link-green programms__link-size"><span>Все курсы</span></a>
+        </div>
+
+
 
     </div>
     <script src="./index.js"></script>
