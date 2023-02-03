@@ -20,6 +20,8 @@ $font-weight-text: 400;
 $font-weight-names_of_card: 600;
 $font-weight-text-in-c-btn: 400;
 
+$box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.15);
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -80,10 +82,9 @@ a{
 
 ._button-green{
     color: white;
-    width: 131px;
-    height: 38px;
     border-radius: 5px;
     transition: all .8s ease;
+    background-color: $color-green-light;
     &:hover{
         background-color: $color-green-dark;
     }
@@ -101,5 +102,20 @@ a{
     transition: all .8s ease;
     &:hover{
         background-color: $color-green-dark;
+    }
+}
+
+._link-white{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $color-green-light;
+    background-color: white;
+    border: 1px solid $color-green-light;
+    border-radius: 5px;
+    transition: all .8s ease;
+    &:hover{
+        background-color: $color-green-light;
+        color: white;
     }
 }

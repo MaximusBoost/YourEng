@@ -2,6 +2,13 @@
 @import './constants/root';
 @import './components/1header/header';
 @import './components/fullScreen/fullScreen';
+@import './components/advantages/advantages.scss';
 @import './components/learning/learning';
 @import './components/teachers/teachers';
-@import './components/programms/programms'
+@import './components/programms/programms';
+@import './components/toDoTest/test';
+@import './components/closeEvent/closeEvent';
+@import './components/feedback/feedback';
+@import './components/questions/questions';
+@import './components/form/form';
+@import './components/footer/footer';

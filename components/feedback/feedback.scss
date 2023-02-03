@@ -1,0 +1,72 @@
+.feedback {
+    padding-bottom: 1px;
+    background-color: $color-white;
+    &__title {
+        font-weight: $font-weight-h1-h2-h3;
+        font-size: 45px;
+        padding-top: 60px;
+    }
+
+    &__container {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+
+    &__card {
+        display: flex;
+        padding-top: 65px;
+        max-width: 50%;
+        &:last-child{
+            max-width: 100%;
+        }
+    }
+
+    &__user-information {
+        padding-left: 54px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__img {
+        width: 100px;
+        height: 100px;
+    }
+
+    &__name {
+        font-weight: $font-weight-h1-h2-h3;
+        font-size: $font-size-h3;
+        padding: 25px 0 5px 0;
+    }
+
+    &__direction {
+        color: $color-grey-light;
+        font-size: 12px;
+        font-weight: 500;
+        width: 105px;
+    }
+
+    &__text-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    &__text {
+        padding-left: 40px;
+        line-height: 140%;
+    }
+
+    &__data {
+        align-self: flex-end;
+        color: $color-grey-light;
+        font-size: 12px;
+        font-weight: 500;
+    }
+
+    &__link {
+        width: 354px;
+        height: 58px;
+        margin: 50px auto 59px auto;
+    }
+}

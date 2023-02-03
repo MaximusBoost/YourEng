@@ -1,7 +1,6 @@
-function delay (ms) {
-    return new Promise ( (res, rej) => {
-        setTimeout(res, ms);
-    } );
-};
-
-delay(5000).then( () => console.log('lolololololol') );
+import Questions from "./components/questions/questions.js";
+import Form from "./components/form/Form.js";
+import Teachers from "./components/teachers/Teachers.js";
+Questions.addListener()
+Form.sendForm()
+Teachers.openSubTitle()

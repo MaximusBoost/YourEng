@@ -2,6 +2,14 @@
     background-color: $color-white-light;
     width: 100%;
     height: 100%;
+    &__about-teacher{
+        transition: all .5s ease;
+        max-height: 20px;
+        padding: 0 0 0 154px;
+        max-width: 500px;
+        height: max-content ;
+        margin-bottom: 100px ;
+    }
 }
 
 .teachers__title{
@@ -40,6 +48,7 @@
         
         padding: 20px 0;
         border-top: 2px solid black;
+        
         &:last-child{
             border-bottom: 2px solid black;
             margin-bottom: 60px;
@@ -49,6 +58,8 @@
             width: 30px;
             height: 15px;
             cursor: pointer;
+            transition: transform .3s ease 0s;
+            transform: rotate(0deg);
             &:hover{
                 filter: brightness(0.5) invert(1);
             }
