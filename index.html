@@ -21,7 +21,7 @@
             <div class="full-screen">
                 <div class="header">
                     <div class="header__logo" >
-                        <span>Your</span><span class="header__span-green">Eng</span>
+                        <a href="#" class="footer__logo-link"><span>Your</span><span class="header__span-green">Eng</span></a>
                     </div>
                     <div class="header__medium-text">
                         <a href="#">Курсы</a><a href="#">Преподаватели</a><a href="#">Мероприятия</a>
@@ -473,9 +473,7 @@
                             <li>Что будет, если у меня не будет возможности во время пройти занятие?</li>
                             <img src="./components/teachers/img/Vector.svg" alt="vector" data-vector="true">
                         </div>
-                        <div class="questions__answer hidden">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum autem unde totam itaque distinctio praesentium eos 
-                            quam quia porro, dolorem doloremque quidem explicabo aspernatur. Excepturi quasi dolor facilis distinctio tempore 
-                            soluta libero blanditiis? Dolorem est, nihil error optio distinctio libero.</div>
+                        <div class="questions__answer hidden">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, cumque magni. Sapiente molestiae exercitationem, ab veritatis cum dolor quos fuga maxime, quas, ipsa odit iure dignissimos reprehenderit aut cupiditate obcaecati!</div>
                     </div>
                     
 
@@ -541,14 +539,14 @@
                         Так же вы можете сами написать нам 
                         в социальных сетях.</p>
                     <form action="#" class="form__send-form" id="form">
-                        <input type="text" class="form__input-name _req" placeholder="Имя" data-input="true">
-                        <input type="text" name="email" class="form__input-email _req _email" placeholder="example@mail.ru" data-input="true">
-                        <textarea name="Вопрос" id="textarea"class="form__textarea _req" placeholder="Вопрос" maxlength="140" data-input="true"></textarea>
+                        <input type="text" class="form__input-name _form__req" placeholder="Имя" data-input="true">
+                        <input type="text" name="email" class="form__input-email _form__req _form__email" placeholder="example@mail.ru" data-input="true">
+                        <textarea name="Вопрос" id="textarea"class="form__textarea _form__req" placeholder="Вопрос" maxlength="140" data-input="true"></textarea>
                         <div class="form__footer">
                             <div class="form__icons">
-                                <img src="./components/form/img/Instagram.svg" alt="instagram" class="form__icon">
-                                <img src="./components/form/img/telegram.svg" alt="telegram" class="form__icon">
-                                <img src="./components/form/img/Vk.svg" alt="vk" class="form__icon">
+                                <a href="#" class="form__icon"><img src="./components/form/img/Instagram.svg" alt="instagram"></a> 
+                                <a href="#" class="form__icon"><img src="./components/form/img/telegram.svg" alt="telegram"></a> 
+                                <a href="#" class="form__icon"><img src="./components/form/img/Vk.svg" alt="vk"></a> 
                             </div>
                             <button class="form__button _button-green">Задать вопрос</button>
                         </div>
@@ -566,7 +564,7 @@
         <footer class="footer">
             <div class="footer__container _container">
                 <div class="footer__logo header__logo" >
-                    <span>Your</span><span class="header__span-green">Eng</span>
+                    <a href="#" class="footer__logo-link"><span>Your</span><span class="header__span-green">Eng</span></a> 
                 </div>
                 <div class="footer__list">
                     <ul>
@@ -577,15 +575,17 @@
                     </ul>
                 </div>
                 <div class="footer__give-mail">
-                    <input type="text" class="footer__input" placeholder="example@mail.ru">
-                    <button class="footer__button _button-green">Подписаться</button>
+                    <form action="#" id="footer__form">
+                        <input type="text" class="footer__input _footer__req _footer__email" placeholder="example@mail.ru" data-input="true">
+                        <button class="footer__button _button-green">Подписаться</button>
+                    </form>
                     <p class="footer__text">Подпишитесь на рассылку, чтобы каждую неделю получать полезные материалы, приглашения на
                         бесплатные лекции и первым узнавать о специальных предложениях</p>
                 </div>
                 <div class="footer__icons">
-                    <img src="./components/form/img/Instagram.svg" alt="instagram" >
-                    <img src="./components/form/img/telegram.svg" alt="telegram" >
-                    <img src="./components/form/img/Vk.svg" alt="vk">
+                    <a href="#"><img src="./components/form/img/Instagram.svg" alt="instagram" ></a>
+                    <a href="#"><img src="./components/form/img/telegram.svg" alt="telegram" ></a> 
+                    <a href="#"><img src="./components/form/img/Vk.svg" alt="vk"></a>
                 </div>
             </div>
         </footer>

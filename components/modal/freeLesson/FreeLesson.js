@@ -1,5 +1,6 @@
 import star from '../freeLesson/img/Vector.svg';
 import close from '../freeLesson/img/Cancel.svg';
+import TechnicalFunctions from '../../../technicalFunctions/TechnicalFunctions';
 class FreeLesson{
     render() {
         let htmlContent = ` 
@@ -86,8 +87,9 @@ class FreeLesson{
                         } else {
                             alert('Ошибка отправки данных на сервер')
                             container.classList.remove('_sending')
-                            let modal = document.querySelector('.modal');
-                            modal.style.display = 'none'
+                            this.close()
+                            // let modal = document.querySelector('.modal');
+                            // modal.style.display = 'none'
                         }
                     },1000)
                 } else {
@@ -100,10 +102,10 @@ class FreeLesson{
                 let formReq = document.querySelectorAll('._modal-req')
                 for(let i = 0; i< formReq.length; i++) {
                     let input = formReq[i];
-                    formRemoveError(input);
+                    TechnicalFunctions.formRemoveError(input);
 
                     if(input.classList.contains('_modal-email')) {
-                         if(!emailTest(input)){
+                         if(!TechnicalFunctions.emailTest(input)){
                             formAddError(input);
                             error++
                          }
@@ -126,20 +128,6 @@ class FreeLesson{
                     input.placeholder = 'Введите дату рождения'
                 }
             }
-            function formRemoveError(input) {
-                input.classList.remove('_error')
-            }
-            function emailTest(input) {
-                return /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/.test(input.value)
-            }
-
-            document.addEventListener('click', function(event) {
-                let target = event.target
-                if(!target.hasAttribute('data-input')) return
-                target.classList.remove('_error')
-            })
-
-       
     }
 }
 export default new FreeLesson()
