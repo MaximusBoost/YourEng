@@ -1,5 +1,6 @@
 .learning-wrapper{
     background-color: $color-white;
+    position: relative;
 }
 
 .learning_title{
@@ -53,5 +54,51 @@
         font-size: 18px;
         max-width: 427px;
         line-height: 140%;
+    }
+}
+
+.learning {
+
+    &__after-lesson {
+        max-width: 35%;
+        max-height: max-content;
+        position: absolute;
+        top: 36%;
+        left: 42%;
+        z-index: 2;
+        padding: 0 55px 55px 55px;
+        border-top: 2px solid black;
+        border-bottom: 2px solid black;
+        background-color: $color-white;
+    }
+}
+.after-lesson {
+
+    &__title {
+        font-weight: 500;
+        font-size: 20px;
+        padding: 35px 0 18px 0;
+    }
+
+    &__container {
+        
+    }
+
+    &__item {
+        font-size: 15px;
+        padding: 5px 0;
+        position: relative;
+        &::before{
+            content:  "";
+            position: absolute;
+            right: 104%;
+            bottom: 23%;
+
+            background-image: url(~/components/learning/img/check-element.svg);
+            background-repeat: no-repeat;
+            width: 20px;
+            height: 18px;
+        }
+        
     }
 }

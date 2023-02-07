@@ -1,0 +1,231 @@
+@import '../../form/form';
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    padding-top: 50px;
+    &::after{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(51,51,51,.9) url(/components/form/img/on.svg) center / 150px no-repeat;
+        opacity: 0;
+        visibility: hidden;
+        transition: all .5s ease 0s;
+    }
+
+    &._sending::after{
+        opacity: 1;
+        visibility: visible;
+    }
+
+    &__body {
+        max-width: 940px;
+        padding: 0;
+        flex-direction: column;
+        background-color: white;
+        position: relative;
+    }
+
+    &__container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        
+        
+    }
+
+    &__title {
+        
+        font-size: $font-size-h2;
+        font-weight: $font-weight-h1-h2-h3;
+        padding: 50px 0;
+    }
+
+    &__star1{
+        position: absolute;
+        top: 24%;
+        left: 46%;
+    }
+    &__star2{
+        position: absolute;
+        top: 24%;
+        left: 94%;
+    }
+    &__star3{
+        position: absolute;
+        top: 39%;
+        left: 94%;
+    }
+
+
+    &__close {
+        float: right;
+        cursor: pointer;
+    }
+
+    &__form {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        input:focus, textarea:focus{
+            box-shadow: 0 0 15px #7a956b;
+            border: none;
+            
+        }
+        input,textarea{
+            transition: all .5s ease 0s;
+        }
+    }
+
+    &__input {
+        border: 1px solid black;
+        border-radius: 5px;
+        padding: 16px 0 16px 25px;
+        width: 45%;
+        margin: 20px;
+        
+
+        &_name {
+            &._error{
+                box-shadow: 0 0 15px red;
+                border: none;
+            }
+    
+            &._error::-webkit-input-placeholder {
+                color: red;
+            }
+    
+            &._error::-moz-placeholder {
+                color: red;
+            }
+        }
+
+        &_birthday {
+            &._error{
+                box-shadow: 0 0 15px red;
+                border: none;
+            }
+    
+            &._error::-webkit-input-placeholder {
+                color: red;
+            }
+    
+            &._error::-moz-placeholder {
+                color: red;
+            }
+        }
+
+        &_phone {
+        }
+
+        &_email {
+            &._error{
+                box-shadow: 0 0 15px red;
+            }
+    
+            &._error::-webkit-input-placeholder {
+                color: red;
+            }
+    
+            &._error::-moz-placeholder {
+                color: red;
+            }
+        }
+
+        &_textarea {
+            width: 100%;
+            height: 100px;
+            margin-bottom: 18px;
+            resize: none;
+            outline: none;
+            &._error{
+                box-shadow: 0 0 15px red;
+            }
+    
+            &._error::-webkit-input-placeholder {
+                color: red;
+            }
+    
+            &._error::-moz-placeholder {
+                color: red;
+            }
+        }
+    }
+
+    &__paragraph {
+        width: 100%;
+        padding: 0 0 0 20px;
+    }
+
+    &__button {
+        width: 289px;
+        height: 48px;
+        margin: 32px 0 40px 0;
+    }
+}
+
+
+.modal__body.disappearance{
+    animation: zoomReverse .3s linear forwards;
+}
+
+.modal__body.open{
+    animation: zoom .3s linear forwards;
+}
+
+.modal.open{
+    animation: fade .3s linear forwards;
+}
+
+.modal.disappearance{
+    animation: fadeReverse .3s linear forwards;
+}
+
+@keyframes zoomReverse {
+    0% {
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.1);
+    }
+    100%{
+        transform: scale(0.1);
+    }
+}
+
+@keyframes zoom {
+    0% {
+        transform: scale(0.1);
+    }
+    50%{
+        transform: scale(1.1);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+@keyframes fade{
+    0% {
+        backdrop-filter: blur(0);
+    } 
+    100% {
+        backdrop-filter: blur(3px);
+    }
+}
+
+@keyframes fadeReverse{
+    0% {
+        backdrop-filter: blur(3px);
+    } 
+    100% {
+        backdrop-filter: blur(0);
+    }
+}

@@ -14,6 +14,7 @@ class Form{
 
                 if(error == 0) {
                     container.classList.add('_sending');
+                    form.reset();
                     setTimeout(() => {
                         let response = fetch('sendmail.php', { // await
                             method: 'POST',
@@ -59,7 +60,7 @@ class Form{
                 input.classList.add('_error')
                 if(input.placeholder == 'Имя') {
                     input.placeholder = 'Введите имя';
-                } else if(input.placeholder == 'example@mail.ru') {
+                } else if(input.placeholder == 'example@mail.ru' || input.placeholder == 'Введите почтовый адрес') {
                     input.placeholder = 'Введите почтовый адрес'
                 } else{
                     input.placeholder = 'Введите интересующий вопрос'
@@ -71,6 +72,13 @@ class Form{
             function emailTest(input) {
                 return /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/.test(input.value)
             }
+
+            document.addEventListener('click', function(event) {
+                let target = event.target
+                if(!target.hasAttribute('data-input')) return
+                target.classList.remove('_error')
+            })
+
        })
     }
 }
