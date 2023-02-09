@@ -1,0 +1,114 @@
+@import '../course_eng-for-travel.scss';
+
+.course-program {
+    max-height: 1030px;
+    background-color: $color-white-light;
+
+    &__container {
+        max-width: 1140px;
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+    }
+
+    &__head {
+        max-height: 290px;
+    }
+
+    &__heading {
+        font-weight: $font-weight-h1-h2-h3;
+        font-size: 45px;
+        line-height: 55px;
+        padding-top: 60px;
+    }
+
+    &__heading-text {
+        font-weight: $font-weight-text;
+        font-size: 18px;
+        line-height: 140%;
+
+        max-width: 552px;
+
+        padding: 40px 0 57px 0;
+
+    }
+
+    &__list-container {
+        border-bottom: solid 2px $color-black-dark;
+
+        margin-bottom: 60px;
+    }
+
+    &__list-item {
+        border-top: 2px solid $color-black-dark;
+    }
+
+    &__list-item-heading {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        padding: 21px 0;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    &__item-head-text {
+        font-weight: $font-weight-text;
+        font-size: $font-size-text;
+        line-height: 24px;
+    }
+
+    &__img-check {
+        width: 30px;
+        height: 15px;
+        transition: 1s;
+    }
+
+    &__big-number {
+        // padding-bottom: 32px;
+        overflow: hidden;
+        max-height: 0px;
+
+        transition: 1s;
+       
+    }
+}
+
+
+.structure-lesson {
+
+    &__choose-data {
+    }
+
+    &__data-number {
+    }
+
+    &__data-number-text {
+        max-width: 485px;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 140%;
+    }
+
+    &__choose-data-heading {
+    }
+
+    &__choose-data-text {
+    }
+}
+
+//animations
+.animation-for-drop-down {
+    max-height: 700px;
+    padding-bottom: 32px;
+    transition: 1s;
+    transition-timing-function: linear;
+}
+
+.chekmark-rotate {
+    transform: rotate(180deg);
+    transition: 1s;
+}

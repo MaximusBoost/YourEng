@@ -1,0 +1,98 @@
+@import '../course_eng-for-travel.scss';
+
+.standarts {
+
+    max-height: 660px;
+    background-color: $color-white;
+
+    &__container {
+        max-width: 1140px;
+        margin: 0 auto;
+    }
+
+    &__heading {
+        font-weight: $font-weight-names_of_card;
+        font-size: $font-size-h3;
+        line-height: 30px;
+        padding-top: 70px;
+    }
+
+    &__container-items {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-bottom: 51px;
+        
+    }
+
+    &__items {
+        width: 367px;
+        height: 408px;
+        margin-top: 60px;
+
+        border-width: 2px 0px;
+        border-style: solid;
+        border-color: #000000;
+    }
+
+    &__item-heading {
+        font-weight: 600;
+        font-size: 25px;
+        line-height: 30px;
+        padding: 30px 0 0 20px;
+
+    }
+
+    &__item-description {
+        padding-top: 40px;
+        // display: flex;
+        // flex-direction: column;
+        // justify-content: space-between;
+        padding-left: 20px;
+
+        font-weight: $font-weight-text;
+        font-size: 15px;
+        line-height: 18px;
+
+        & p {
+            padding-bottom: 30px;
+        }
+    }
+
+    &__price-btn {
+        padding: 30px 0 0 20px;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-right: 20px;
+
+        font-weight: $font-weight-text;
+        font-size: 15px;
+        line-height: 18px;
+
+        & span {
+            font-weight: $font-weight-h1-h2-h3;
+        }
+    }
+
+    &__btn {
+        width: 158px;
+        height: 38px;
+        margin-top: 10px;
+
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 18px;
+        color: $color-white;
+        border-radius: 5px;
+        
+        background-color: $color-green-light;
+        transition: all .8s ease;
+
+        &:hover{
+            background-color: $color-green-dark;
+            cursor: pointer;
+        }
+    }
+}

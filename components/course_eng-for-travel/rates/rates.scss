@@ -1,0 +1,77 @@
+@import '../course_eng-for-travel.scss';
+
+.rates {
+
+    max-height: 435px;
+    background-color: $color-black-dark;
+    color: $color-white;
+
+    &__container {
+        max-width: 1140px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+    }
+
+    &__left-part {
+        width: 50%;
+
+    }
+
+    &__heading {
+        font-weight: 700;
+        font-size: 45px;
+        line-height: 55px;
+        padding-top: 40px;
+    }
+
+    &__text-first {
+        max-width: 343px;
+        max-height: 75px;
+        margin-top: 40px;
+
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 140%;
+
+    }
+
+    &__text-second {
+        max-width: 343px;
+        max-height: 75px;
+        margin-top: 17px;
+
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 140%;
+    }
+
+    &__btn {
+
+        width: 197px;
+        height: 48px;
+        margin-bottom: 48px;
+
+        background: $color-green-light;
+        border-radius: 5px;
+
+        margin-top: 27px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 18px;
+
+    }
+
+    &__right-part {
+    }
+
+    &__happy-girl {
+        margin-top: 52px;
+        padding-right: 53px;
+    }
+}

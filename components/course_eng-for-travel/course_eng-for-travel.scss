@@ -1,0 +1,168 @@
+@import '../../null.scss';
+@import '../../index.scss';
+@import '../../constants/root';
+@import '../courses/components/chooseCourse/chooseCourse.scss';
+
+.full-screen-wrapper {
+    background-color: #000;
+    height: 600px;
+};
+.full-screen {
+
+		&_read-area {
+            padding-top: 140px;
+		}
+
+		&__left-part {
+            padding: 0;
+		}
+
+		&__text-big {
+		}
+
+		&__text-small {
+		}
+
+		&__link-size {
+		}
+
+		&__right-part {
+            padding-top: 121px;
+		}
+
+		&__flex-box {
+		}
+
+		&__span {
+		}
+}
+.full-screen-content {
+}
+.choose-course {
+
+		&__navigation {
+            padding-top: 20px;
+		}
+
+		&__navigation-main {
+            color: $color-white;
+		}
+
+		&__navigation-course {
+            color: $color-white;
+		}
+}
+
+
+.advantages {
+
+    background-color: $color-white;
+
+    &__card {
+
+        &:nth-child(3) {
+            padding-bottom: 0;
+        }
+
+        &:nth-child(4) {
+            padding-bottom: 0;
+        }
+    }
+
+}
+
+.structure-lesson {
+
+    background-color: $color-white-light;
+    max-height: 776px;
+
+    &__container {
+        max-width: 1140px;
+        margin: 0 auto;
+
+        display: flex;
+        flex-direction: row;
+    }
+
+    &__left-part {
+        width: 50%;
+        padding-left: 30px;
+    }
+
+    &__title {
+        font-weight: $font-weight-h1-h2-h3;
+        font-size: 45px;
+        line-height: 55px;
+        padding-top: 60px;
+    }
+
+    &__under-title {
+        font-weight: 600;
+        font-size: $font-size-h3;
+        line-height: 30px;
+        padding-top: 40px;
+    }
+
+    &__choose-data {
+        display: flex;
+    }
+
+    &__data-number {
+        padding-top: 20px;
+
+        font-weight: 600;
+        font-size: 200px;
+        line-height: 244px;
+        color: #005C3D;
+    }
+
+    &__data-number-text {
+        padding: 72px 0 0 19px;
+        max-width: 346px;
+    }
+
+    &__choose-data-heading {
+        font-weight: 700;
+        font-size: $font-size-h3;
+        line-height: 30px;
+    }
+
+    &__choose-data-text {
+
+        padding-top: 20px;
+        font-weight: 400;
+        font-size: $font-size-text;
+        line-height: 130%;
+    }
+
+    &__arrow-right {
+        width: 60px;
+        height: 26px;
+
+        float: right;
+    }
+
+    &__right-part {
+        padding: 88px 0 60px 0;
+    }
+
+    &__slider-line {
+
+        padding-top: 170px;
+        & span {
+            font-weight: 700;
+            font-size: 20px;
+        }
+    }
+
+    &__container-for-slide-bar {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+
+    &__slider-img {
+
+        padding-top: 108px;
+    }
+}

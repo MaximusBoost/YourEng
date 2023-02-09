@@ -1,0 +1,280 @@
+@import '../../../../constants/_root';
+
+.choose-course {
+    width: 100%;
+    height: 245px; // из-за padding-top увеличили на 10px
+    background-color: $color-white;
+    padding-top: 10px;
+}
+
+.choose-course {
+
+    &__navigation {
+        display: flex;
+    }
+
+    &__navigation-main {
+        color: $color-grey-dark;
+        font-weight: $font-weight-text;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+    }
+
+    &__navigation-img {
+    }
+
+    &__navigation-course {
+        color: $color-grey-dark;
+        font-weight: $font-weight-names_of_card;
+        font-size: 14px;
+        line-height: 17px;
+    }
+
+    &__title {
+        margin-top: 73px;
+
+        font-weight: 700;
+        font-size: 45px;
+        line-height: 55px;
+    }
+
+    &__search {
+        // border: solid 3px green;
+        margin-top: 40px;
+        
+    }
+
+    &__input {
+        width: 402px;
+        height: 50px;
+
+        padding-left: 30px;
+
+        float: left;
+
+        border: 1px solid #000000;
+        border-radius: 5px 0px 0px 5px;
+
+        &::placeholder{
+            width: 176px;
+            height: 15px;
+            
+
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 15px;
+
+            color: $color-grey-dark;
+            
+            
+        }
+
+    }
+
+    &__btn {
+        width: 158px;
+        height: 50px;
+
+        color: #fff;
+
+        float: left;
+
+        background: $color-green-light;
+        border-radius: 0px 5px 5px 0px;
+    }
+
+    &__sort {
+        height: 50px;
+
+        display: flex;
+        
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+    
+    }
+
+    &__choose-method {
+    }
+
+    &__list-methods {
+        color: $color-grey-dark;
+    }
+
+    &__list-img {
+        width: 14px;
+        height: 7px;
+    }
+}
+
+.course-list {
+    height: 1393px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 70px; //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+    background-color: $color-white;
+
+
+    &__filters {
+        width: 270px;
+        height: 421px;
+    }
+
+    &__filter-main {
+        font-weight: 600;
+        font-size: $font-size-text;
+        line-height: 24px;
+    }
+
+    &__filters-items {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-top: 50px;
+        height: 200px;
+
+    }
+
+    &__item-solo {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        font-weight: 600;
+        font-size: $font-size-text;
+        line-height: 24px;
+    }
+
+    &__img {
+        width: 18px;
+        height: 9px;
+    }
+
+    &__btn {
+        margin-top: 50px;
+        width: 158px;
+        height: 50px;
+
+        background-color: $color-green-light;
+
+        color: $color-white;
+        border-radius: 5px;
+
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 20px;
+
+    }
+
+    &__reset {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px;
+        margin-top: 30px;
+
+        text-decoration-line: underline;
+    }
+
+    &__cards{
+        width: 775px;
+        height: 1143px;
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    &__size-lesson{
+        width: 366px;
+        height: 381px;
+        margin: 0;
+    }
+
+    &__price-lesson{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        font-size: 15px;
+        line-height: 18px;
+        line-height: 100%;
+        
+
+        width: 100px;
+        height: 36px;
+
+        & span {
+            font-weight: 400;
+        }
+    }
+
+    &__number-page{
+        position: relative;
+        top: 1193px;
+        right: 452px;
+
+        height: 130px;
+    }
+
+}
+
+.card { //колхоз
+    
+    &:nth-last-child(-n + 3) {
+        border-bottom: none;
+    }
+}
+
+._button-green{ // тоже чистый колхоз
+    
+    border-radius: 0 5px 5px 0;
+    
+}
+
+.full-screen-wrapper { // мисье колхозье
+    background-color: #fff;
+}
+
+.footer{
+    height: 345px;
+}
+
+.drop-list {
+    position: absolute;
+    top: 312px;
+    right: 183px;
+
+    background-color: $color-white;
+
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    width: 160px;
+
+    & span {
+        height: 38px;
+        border: 1px solid $color-grey-dark;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        padding-left: 15px;
+    }
+
+    & span:nth-child(1) {
+        border-bottom: none;
+    }
+
+    & span:nth-child(3) {
+        border-top: none;
+    }
+}
+

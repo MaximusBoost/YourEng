@@ -1,0 +1,103 @@
+@import '../course_eng-for-travel.scss';
+
+.feedbacks {
+
+    max-height: 820px;
+    background-color: $color-white;
+
+    &__container {
+        max-width: 1140px;
+        margin: 0 auto;
+    }
+
+    &__heading-text {
+        font-weight: 700;
+        font-size: 45px;
+        line-height: 55px;
+        padding-top: 60px;
+    }
+
+    &__main-block {
+        padding-top: 40px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__small-feedbacks {
+        padding-right: 21px;
+
+        display: flex;
+        width: 100%;
+    }
+
+    &__person-about {
+        min-width: 145px;
+    }
+
+    &__person-img {
+        padding: 25px 0 0 25px;
+    }
+
+    &__person-name {
+        font-weight: 700;
+        font-size: $font-size-h3;
+        line-height: 30px;
+        padding-left: 40px;
+        padding-top: 20px;
+    }
+
+    &__person-target {
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 15px;
+        color: $color-grey-light;
+
+        padding: 5px 0 0 41px;
+    }
+
+    &__person-text-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        padding-top: 25px;
+    }
+
+    &__person-text {
+        font-weight: $font-weight-text;
+        font-size: $font-size-text-in-c-btn;
+        line-height: 140%;
+        padding-left: 15px;
+
+    }
+
+    &__person-data {
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 15px;
+        color: $color-grey-light;
+        align-self: flex-end;
+    }
+
+    &__big-feedbacks {
+        display: flex;
+        padding-top: 40px;
+    }
+
+    &__kolhoz {
+        padding-right: 38px;
+    }
+
+    &__btn-more {
+        width: 354px;
+        height: 58px;
+        background: $color-green-light;
+        border-radius: 5px;
+
+        color: $color-white;
+
+        margin: 50px auto 0 auto;
+        display: block;
+        margin-bottom: 60px;
+    }
+}

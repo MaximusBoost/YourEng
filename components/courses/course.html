@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./course.scss">
+    <title>YourEng</title>
+</head>
+<body>
+    <div class="main">
+
+        <div class="header">
+            <div class="header__logo" >
+                <span>Your</span><span class="header__span-green">Eng</span>
+            </div>
+            <div class="header__medium-text">
+                <a href="#">Курсы</a><a href="#">Преподаватели</a><a href="#">Мероприятия</a>
+            </div>
+            <div class="header__personal-cabinet"><a href="#">Личный кабинет</a></div>
+
+        </div>
+
+        <div class="full-screen-wrapper">
+            <div class="full-screen">
+                
+
+                <div class="choose-course">
+                    
+                    <div class="choose-course__navigation">
+                        <a href="" class="choose-course__navigation-main">Главная&nbsp;>&nbsp;</a>
+                        <a href="" class="choose-course__navigation-course">Курсы</a>
+                    </div>
+
+                    <div class="choose-course__title">
+                        Подберите курс для своих целей
+                    </div>
+                    
+                    <div class="choose-course__search">
+                        <input type="text" class="choose-course__input" placeholder="Поиск по ключевым словам">
+                        <button class="choose-course__btn" type="submit">Применить</button>
+                    </div>
+
+                    <div class="choose-course__sort">
+                        <span class="choose-course__choose-method">Соритровать по&nbsp;</span>
+                        <a href="" class="choose-course__list-methods">популярности&nbsp;</a>
+                        <img src="./components/chooseCourse/img/Vector.svg" alt="" class="choose-course__list-img">
+                    </div>
+
+                </div>
+
+                <div class="course-list">
+
+                        <div class="course-list__filters">
+
+                            <p class="course-list__filter-main">Фильтры</p>
+
+                            <div class="course-list__filters-items">
+
+                                <div class="course-list__item-solo">Цель
+                                    <img src="./components/chooseCourse/img/Vector.svg" alt="" class="course-list__img">
+                                </div>
+                                <div class="course-list__item-solo">Цена
+                                    <img src="./components/chooseCourse/img/Vector.svg" alt="" class="course-list__img">
+                                </div>
+                                <div class="course-list__item-solo">Возраст
+                                    <img src="./components/chooseCourse/img/Vector.svg" alt="" class="course-list__img">
+                                </div>
+                                <div class="course-list__item-solo">Цель
+                                    <img src="./components/chooseCourse/img/Vector.svg" alt="" class="course-list__img">
+                                </div>
+                                <div class="course-list__item-solo">Длительность
+                                    <img src="./components/chooseCourse/img/Vector.svg" alt="" class="course-list__img">
+                                </div>
+                            </div>
+
+                            <button class="course-list__btn">Применить</button>
+
+                            <p class="course-list__reset">Сбросить фильтры</p>
+
+                        </div>
+
+                        <div class="course-list__cards">
+
+                            <div class="close-event__card card course-list__size-lesson">
+                                <div class="card__title">Бизнес-английский</div>
+                                <img src="./components/chooseCourse/img/pezdyat_blyat.png" alt="classroom" class="card__img">
+                                <p class="card__description">Развиваем языковые навыки делового общения: составление резюме, ведение переписки, участие в переговорах</p>
+                                <div class="card__footer">
+                                    <div class="card__price course-list__price-lesson"><span>от&nbsp;</span> 600 руб.&nbsp;<span>за занятие</span></div>
+                                    <a href="#" class="card__link _link-white">Подробнее</a>
+                                </div>
+                            </div>
+                            <div class="close-event__card card course-list__size-lesson">
+                                <div class="card__title">Английский для путешествий</div>
+                                <img src="./components/chooseCourse/img/big_ban.png" alt="classroom" class="card__img">
+                                <p class="card__description">Ничего лишнего! В программе делается 
+                                    упор, которые будут необходимы для посещения англоязычных стран</p>
+                                <div class="card__footer">
+                                    <div class="card__price course-list__price-lesson"><span>от&nbsp;</span> 600 руб.&nbsp;<span>за занятие</span></div>
+                                    <a href="../course_eng-for-travel/course_eng-for-travel.html" class="card__link _link-white">Подробнее</a>
+                                </div>
+                            </div>
+                            <div class="close-event__card card course-list__size-lesson">
+                                <div class="card__title">От Beginner до Elementary</div>
+                                <img src="./components/chooseCourse/img/do_more.png" alt="classroom" class="card__img">
+                                <p class="card__description">Сделайте первый рывок в изучении
+                                    английского языка и повысьте свой уровень до elementary.</p>
+                                <div class="card__footer">
+                                    <div class="card__price course-list__price-lesson"><span>от&nbsp;</span> 600 руб.&nbsp;<span>за занятие</span></div>
+                                    <a href="#" class="card__link _link-white">Подробнее</a>
+                                </div>
+                            </div>
+                            <div class="close-event__card card course-list__size-lesson">
+                                <div class="card__title">IT-английский</div>
+                                <img src="./components/chooseCourse/img/klava.png" alt="classroom" class="card__img">
+                                <p class="card__description">Техническую лексику из области программирования, тестирования, аналитики и других направлений IT </p>
+                                <div class="card__footer">
+                                    <div class="card__price course-list__price-lesson"><span>от&nbsp;</span> 600 руб.&nbsp;<span>за занятие</span></div>
+                                    <a href="#" class="card__link _link-white">Подробнее</a>
+                                </div>
+                            </div>
+                            <div class="close-event__card card course-list__size-lesson">
+                                <div class="card__title">Общий разговорный курс</div>
+                                <img src="./components/chooseCourse/img/tozhe_pizdyat.png" alt="classroom" class="card__img">
+                                <p class="card__description">Развитие разговорных навыков 
+                                    и преодоление языкового барьера.
+                                    Научитесь понимать носителей языка.</p>
+                                <div class="card__footer">
+                                    <div class="card__price course-list__price-lesson"><span>от&nbsp;</span> 600 руб.&nbsp;<span>за занятие</span></div>
+                                    <a href="#" class="card__link _link-white">Подробнее</a>
+                                </div>
+                            </div>
+                            <div class="close-event__card card course-list__size-lesson">
+                                <div class="card__title">Английский для ЕГЭ</div>
+                                <img src="./components/chooseCourse/img/im_lish_bi_pizdet.png" alt="classroom" class="card__img">
+                                <p class="card__description">Подготовка к ЕГЭ - не так страшно, 
+                                    как кажется на первый вгляд. И на второй взгляд тоже.</p>
+                                <div class="card__footer">
+                                    <div class="card__price course-list__price-lesson"><span>от&nbsp;</span> 600 руб.&nbsp;<span>за занятие</span></div>
+                                    <a href="#" class="card__link _link-white">Подробнее</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="course-list__number-page">
+                            1 2 3 4 5 6 7 8
+                        </div>
+
+                        
+                </div>
+
+            
+
+            </div>
+
+            <footer class="footer">
+                <div class="footer__container _container">
+                    <div class="footer__logo header__logo" >
+                        <span>Your</span><span class="header__span-green">Eng</span>
+                    </div>
+                    <div class="footer__list">
+                        <ul>
+                            <li><a href="#">Курсы</a></li>
+                            <li><a href="">Преподаватели</a></li>
+                            <li><a href="">Мероприятия</a></li>
+                            <li><a href="">Личный кабинет</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__give-mail">
+                        <input type="text" class="footer__input" placeholder="example@mail.ru">
+                        <button class="footer__button _button-green">Подписаться</button>
+                        <p class="footer__text">Подпишитесь на рассылку, чтобы каждую неделю получать полезные материалы, приглашения на
+                            бесплатные лекции и первым узнавать о специальных предложениях</p>
+                    </div>
+                    <div class="footer__icons">
+                        <img src="../form/img/Instagram.svg" alt="instagram" >
+                        <img src="../form/img/telegram.svg" alt="telegram" >
+                        <img src="../form/img/Vk.svg" alt="vk">
+                    </div>
+                </div>
+            </footer>
+
+        </div>
+
+    </div>
+
+    <script src="./course.js"></script>
+</body>
+</html>
+
+
+
