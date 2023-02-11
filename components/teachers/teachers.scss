@@ -2,14 +2,26 @@
     background-color: $color-white-light;
     width: 100%;
     height: 100%;
-    &__about-teacher{
-        transition: all .5s ease;
-        max-height: 20px;
-        padding: 0 0 0 154px;
-        max-width: 500px;
-        height: max-content ;
-        margin-bottom: 100px ;
+    &__body{
+        padding-bottom: 60px;
     }
+
+    &__about-teacher{
+        color: $color-grey-dark;
+        transition: all .5s ease 0s;
+        max-height: 120px;
+        margin: 0 0 25px 154px;
+    }
+
+    &__wrapper{
+        position: relative;
+    }
+
+    // &__line{
+    //     width: 100%;
+    //     height: 2px;
+    //     background-color: black;
+    // }
 }
 
 .teachers__title{
@@ -43,16 +55,18 @@
 .teachers__our-teacher-container{
     margin: 40px 0 0 128px;
     width: 100%;
+    max-height: 563px;
+    overflow: hidden;
     .teachers__our-teacher{
         display: flex;
-        
         padding: 20px 0;
         border-top: 2px solid black;
-        
+        transition: all 1s ease 0s;
+
         &:last-child{
-            border-bottom: 2px solid black;
             margin-bottom: 60px;
         }
+
         img:last-child{
             margin: 42px 0 0 120px;
             width: 30px;
@@ -81,4 +95,26 @@
         }
     }
     
+}
+
+.unvisible{
+    max-height: 0;
+    transform: translateY(200px);
+}
+
+.visible{
+    max-height: 300px;
+    transform: translateY(0);
+}
+
+.unvisible__alex{
+    transform: translateY(-200px);
+    max-height: 0;
+    opacity: 0;
+}
+
+.visible__alex{
+    max-height: 300px;
+    opacity: 1;
+    transform: translateY(0);
 }

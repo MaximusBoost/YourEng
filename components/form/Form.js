@@ -1,78 +1,76 @@
+import TechnicalFunctions from "../../technicalFunctions/TechnicalFunctions";
+
 class Form{
     sendForm() {
-        document.addEventListener('DOMContentLoaded', function() {
-            const form = document.getElementById('form');
+        const form = document.getElementById('form');
 
-            form.addEventListener('submit', formSend);
+        form.addEventListener('submit', formSend);
 
-            async function formSend(event){
-                event.preventDefault();
+        async function formSend(event){
+            event.preventDefault();
 
-                let error = formValidate(form)
+            let error = formValidate();
 
-                let formData = new FormData(form);
+            let formData = new FormData(form);
 
-                if(error == 0) {
-                    container.classList.add('_sending');
-                    setTimeout(() => {
-                        let response = fetch('sendmail.php', { // await
-                            method: 'POST',
-                            body: formData
-                        });
-                        if(response.ok) {
-                            let result = response.json(); // await
-                            alert(result.message);
-                            form.reset();
-                            container.classList.remove('_sending')
-                        } else {
-                            alert('Ошибка отправки данных на сервер')
-                            container.classList.remove('_sending')
-                        }
-                    },1000)
-                } else {
-                    alert('Заполните обязательные поля')
-                }
-            }
-
-            function formValidate() {
-                let error = 0;
-                let formReq = document.querySelectorAll('._req')
-                for(let i = 0; i< formReq.length; i++) {
-                    let input = formReq[i];
-                    formRemoveError(input);
-
-                    if(input.classList.contains('_email')) {
-                         if(!emailTest(input)){
-                            formAddError(input);
-                            error++
-                         }
+            if(error == 0) {
+                container.classList.add('_sending');
+                form.reset();
+                setTimeout(() => {
+                    let response = fetch('sendmail.php', { // await
+                        method: 'POST',
+                        body: formData,
+                    });
+                    if(response.ok) {
+                        let result = response.json(); // await
+                        alert(result.message);
+                        form.reset();
+                        container.classList.remove('_sending');
                     } else {
-                        if(input.value == '') {
-                            formAddError(input);
-                            error++;
-                        }
-                    }
-                }
-                return error;
-            }
-            function formAddError(input) {
-                input.classList.add('_error')
-                if(input.placeholder == 'Имя') {
-                    input.placeholder = 'Введите имя';
-                } else if(input.placeholder == 'example@mail.ru') {
-                    input.placeholder = 'Введите почтовый адрес'
-                } else{
-                    input.placeholder = 'Введите интересующий вопрос'
-                }
-            }
-            function formRemoveError(input) {
-                input.classList.remove('_error')
-            }
-            function emailTest(input) {
-                return /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/.test(input.value)
-            }
-       })
-    }
-}
+                        alert('Ошибка отправки данных на сервер')
+                        container.classList.remove('_sending')
+                    };
+                },1000);
+            } else {
+                alert('Заполните обязательные поля');
+            };
+        };
+
+        function formValidate() {
+            let error = 0;
+            let formReq = document.querySelectorAll('._form__req');
+            for(let i = 0; i< formReq.length; i++) {
+                let input = formReq[i];
+                TechnicalFunctions.formRemoveError(input);
+
+                if(input.classList.contains('_form__email')) {
+                        if(!TechnicalFunctions.emailTest(input)){
+                        formAddError(input);
+                        error++;
+                    };
+                } else {
+                    if(input.value == '') {
+                        formAddError(input);
+                        error++;
+                    };
+                };
+            };
+            return error;
+        };
+            
+        function formAddError(input) {
+            input.classList.add('_error');
+            if(input.placeholder == 'Имя') {
+                input.placeholder = 'Введите имя';
+            } else if(input.placeholder == 'example@mail.ru' || input.placeholder == 'Введите почтовый адрес') {
+                input.placeholder = 'Введите почтовый адрес'
+            } else{
+                input.placeholder = 'Введите интересующий вопрос'
+            };
+        };
+
+        TechnicalFunctions.addListenerForDataInput();
+    };
+};
 
 export default new Form()
