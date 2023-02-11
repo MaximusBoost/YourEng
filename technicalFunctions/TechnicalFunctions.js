@@ -3,53 +3,53 @@ class TechnicalFunctions {
 
     formValidate(className,emailName) {
         let error = 0;
-        let formReq = document.querySelectorAll(`.${className}`)
+        let formReq = document.querySelectorAll(`.${className}`);
         for(let i = 0; i< formReq.length; i++) {
             let input = formReq[i];
-            this.formRemoveError(input)
+            this.formRemoveError(input);
 
             if(input.classList.contains(emailName)) {
                  if(!this.emailTest(input)){
-                    this.formAddError(input)
-                    error++
-                 }
+                    this.formAddError(input);
+                    error++;
+                 };
             } else {
                 if(input.value == '') {
-                    this.formAddError(input)
+                    this.formAddError(input);
                     error++;
-                }
-            }
-        }
+                };
+            };
+        };
         return error;
-    }
+    };
 
     formAddError(input) {
-        input.classList.add('_error')
+        input.classList.add('_error');
         if(input.placeholder == 'example@mail.ru' || input.placeholder == 'Введите почтовый адрес') {
-            input.placeholder = 'Введите почтовый адрес'
+            input.placeholder = 'Введите почтовый адрес';
         } 
     }
     
     formRemoveError(input) {
-        input.classList.remove('_error')
+        input.classList.remove('_error');
     }
     emailTest(input) {
-        return /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/.test(input.value)
+        return /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/.test(input.value);
     }
 
     addListenerForDataInput() {
         document.addEventListener('click', function(event) {
-            let target = event.target
-            if(!target.hasAttribute('data-input')) return
-            target.classList.remove('_error')
-        })
-    }
+            let target = event.target;
+            if(!target.hasAttribute('data-input')) return;
+            target.classList.remove('_error');
+        });
+    };
 
     addListenerDataClose() {
         document.addEventListener('click', function(event) {
             let target = event.target;
             if(target.dataset.close) {
-                FreeLesson.close()
+                FreeLesson.close();
             };
         });
     };
@@ -59,6 +59,11 @@ class TechnicalFunctions {
         record.addEventListener('click', function() { // запись на бесплатное занятие через главную страницу
             FreeLesson.open(); // открытие модального окна
             FreeLesson.sendForm();
+            document.addEventListener('keydown', function(event) {
+                if(event.code.toLowerCase() == 'escape') {
+                    FreeLesson.close();
+                };
+            });
         });
     };
 };

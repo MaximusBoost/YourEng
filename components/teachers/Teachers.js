@@ -1,7 +1,4 @@
 class Teachers {
-    constructor() {
-        this.counter = 0;
-    }
     openSubTitle() {
         let teachers = document.querySelectorAll('.teachers__our-teacher');
         document.addEventListener('click', function(event) {
@@ -15,40 +12,46 @@ class Teachers {
                 }
             }
 
-            
-
-            
-            
-            // if(vector.id == 'vector4') {
-            //     let target = vector.parentNode.nextElementSibling;
-            //     target.classList.toggle('hidden');
-            //     if(target.classList.contains('hidden')) {
-            //         vector.style.transform = 'rotate(0deg)';
-            //         this.counter++
-            //         // teachers[0].classList.remove('unvisible-alex');
-            //         // teachers[0].classList.add('visible-alex');
-            //     } else {
-            //         vector.style.transform = 'rotate(-180deg)'
-            //         this.counter++
-            //         // teachers[0].classList.remove('visible-alex');
-            //         // teachers[0].classList.add('unvisible-alex');
-            //     };
-            // } else {
+            if(vector.id != 'vector4') {
                 let target = vector.parentNode.nextElementSibling;
                 target.classList.toggle('hidden');
+
                 if(target.classList.contains('hidden')) {
-                    this.counter++
                     vector.style.transform = 'rotate(0deg)';
-                    teachers[teachers.length - 1].classList.remove('unvisible');
-                    teachers[teachers.length - 1].classList.add('visible');
-                    
+
+                    if(teachers[0].classList.contains('unvisible__alex')) {
+                        teachers[0].classList.remove('unvisible__alex');
+                        teachers[0].classList.add('visible__alex');
+                    } else {
+                        teachers[teachers.length - 1].classList.remove('unvisible');
+                        teachers[teachers.length - 1].classList.add('visible');
+                    };
+                        
                 } else {
-                    this.counter++
-                    vector.style.transform = 'rotate(-180deg)'
-                    teachers[teachers.length - 1].classList.remove('visible');
-                    teachers[teachers.length - 1].classList.add('unvisible');
+                    vector.style.transform = 'rotate(-180deg)';
+                    if(!teachers[0].classList.contains('unvisible__alex')) {
+                        teachers[teachers.length - 1].classList.add('unvisible');
+                        teachers[teachers.length - 1].classList.remove('visible');
+                    };
+                                
                 };
-            // };
+            } else {
+                let target = vector.parentNode.nextElementSibling;
+                target.classList.toggle('hidden');
+
+                if(target.classList.contains('hidden')) {
+                    vector.style.transform = 'rotate(0deg)';
+                    teachers[0].classList.remove('unvisible__alex');
+                    teachers[0].classList.add('visible__alex');
+                        
+                        
+                } else {
+                    vector.style.transform = 'rotate(-180deg)';
+                    teachers[0].classList.add('unvisible__alex');
+                    teachers[0].classList.remove('visible__alex');
+                        
+                };
+            };
         });
     };
 };

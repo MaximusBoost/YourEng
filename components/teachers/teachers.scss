@@ -13,11 +13,10 @@
         margin: 0 0 25px 154px;
     }
 
-    &__about-teacher_hidden-element{
+    &__wrapper{
         position: relative;
-        top: 20%;
-        left: 0%;
     }
+
     // &__line{
     //     width: 100%;
     //     height: 2px;
@@ -56,11 +55,13 @@
 .teachers__our-teacher-container{
     margin: 40px 0 0 128px;
     width: 100%;
+    max-height: 563px;
+    overflow: hidden;
     .teachers__our-teacher{
         display: flex;
         padding: 20px 0;
         border-top: 2px solid black;
-        transition: all .5s ease;
+        transition: all 1s ease 0s;
 
         &:last-child{
             margin-bottom: 60px;
@@ -97,19 +98,23 @@
 }
 
 .unvisible{
-    opacity: 0;
-    position: absolute;
-    transform: translateY(50px);
-    width: 44%;
+    max-height: 0;
+    transform: translateY(200px);
 }
 
 .visible{
-    opacity: 1;
-    position: absolute;
+    max-height: 300px;
     transform: translateY(0);
-    width: 44%;
 }
 
-// .clifford{
+.unvisible__alex{
+    transform: translateY(-200px);
+    max-height: 0;
+    opacity: 0;
+}
 
-// }
+.visible__alex{
+    max-height: 300px;
+    opacity: 1;
+    transform: translateY(0);
+}

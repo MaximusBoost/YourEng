@@ -57,6 +57,7 @@ class FreeLesson{
         };
     }; 
 
+
     sendForm() {
         
             let form = document.getElementById('form-free-lesson');
@@ -64,7 +65,7 @@ class FreeLesson{
 
             form.addEventListener('submit', formSend);
 
-            async function formSend(event){
+            function formSend (event){  // async
                 event.preventDefault();
 
                 let error = formValidate(form)
@@ -74,6 +75,7 @@ class FreeLesson{
                 if(error == 0) {
                     container.classList.add('_sending');
                     form.reset();
+   
                     setTimeout(() => {
                         let response = fetch('sendmail.php', { // await
                             method: 'POST',
@@ -86,10 +88,22 @@ class FreeLesson{
                             container.classList.remove('_sending')
                         } else {
                             alert('Ошибка отправки данных на сервер')
-                            container.classList.remove('_sending')
-                            this.close()
-                            // let modal = document.querySelector('.modal');
-                            // modal.style.display = 'none'
+                            container.classList.remove('_sending');
+                            
+                            let modal = document.querySelector('.modal');  // дублирование кода
+                            let modalWindow = document.querySelector('.modal__body');
+                            if(modal) {
+                                modalWindow.classList.remove('open');
+                                modalWindow.parentElement.classList.remove('open');
+                                modalWindow.classList.add('disappearance');
+                                modalWindow.parentElement.classList.add('disappearance');
+                                setTimeout(() => {
+                                    modalWindow.classList.remove('disappearance');
+                                    modalWindow.parentElement.classList.remove('disappearance');
+                                    ROOT_MODAL.innerHTML = ''
+                                },300);
+                            }; // дублирование кода
+
                         }
                     },1000)
                 } else {
