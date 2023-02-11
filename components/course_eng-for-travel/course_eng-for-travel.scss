@@ -3,6 +3,7 @@
 @import '../../constants/root';
 @import '../courses/components/chooseCourse/chooseCourse.scss';
 
+
 .full-screen-wrapper {
     background-color: #000;
     height: 600px;
@@ -24,6 +25,8 @@
 		}
 
 		&__link-size {
+            width: 189px;
+            height: 48px;   
 		}
 
 		&__right-part {
@@ -138,7 +141,7 @@
     &__arrow-right {
         width: 60px;
         height: 26px;
-
+        cursor: pointer;
         float: right;
     }
 

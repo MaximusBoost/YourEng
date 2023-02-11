@@ -33,6 +33,11 @@
         border-width: 2px 0px;
         border-style: solid;
         border-color: #000000;
+        transition: 0.5s;
+
+        &:hover{
+            box-shadow: $box-shadow;
+        }
     }
 
     &__item-heading {
