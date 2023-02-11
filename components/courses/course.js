@@ -1,38 +1,39 @@
 'use strict'
 
 class DropDownList{
-    addListener() {
-        document.addEventListener('click', function(event) {
-            let list = this.querySelector('.choose-course__list-methods');
-            let dropElem = this.querySelector('.drop-list');
+    addEventListennerFilter() {
+        let clickElems = document.querySelectorAll('.course-list__item-solo-header');
+        let dropDownElems = document.querySelectorAll('.course-list__items-checkbox');
+        let degElem = document.querySelectorAll('.course-list__img');
 
-            
+        for(let i = 0; i < clickElems.length; i++) {
+            clickElems[i].addEventListener('click', function () {
+                dropDownElems[i].classList.toggle('animation-left-block');
+                degElem[i].classList.toggle('animation-rotate');
+            });
+        }
+    }
 
-            if( event.target.classList.value.includes('choose-course__list-img') &&
-            dropElem == null) {
+    addEventListenner() {
+        let arrWithElem = [
+            document.querySelector('.choose-course__choose-method'),
+            document.querySelector('.choose-course__list-methods'),
+            document.querySelector('.choose-course__list-img')
+        ];
+        let dropDownElem = document.querySelector('.sort-menu');
+        let degElem = document.querySelector('.choose-course__list-img');
 
-                console.log(dropElem, '+')
-
-                let elem = document.createElement('div');
-                elem.innerHTML = `
-                    <div class="drop-list">
-                        <span>дате</span>
-                        <span>цене</span>
-                        <span>длительности</span>
-                    </div>
-                `;
-                list.append(elem);
-
-            } else {
-                dropElem.remove();
-
-            };
-
-        });
-    };
+        for(let elem of arrWithElem) {
+            elem.addEventListener('click', function() {
+                degElem.classList.toggle('animation-rotate');
+                dropDownElem.classList.toggle('super-animation');
+            });
+        };
+    }
 };
 
 let callThisFunc = new DropDownList;
-callThisFunc.addListener();
+callThisFunc.addEventListennerFilter();
+callThisFunc.addEventListenner();
 
 export default new DropDownList();

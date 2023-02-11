@@ -92,10 +92,19 @@
         flex-direction: row;
         align-items: center;
         justify-content: flex-end;
+
+       & img {
+        cursor: pointer;
+       }
+
+       & p {
+        cursor: pointer;
+       }
     
     }
 
     &__choose-method {
+        cursor: pointer;
     }
 
     &__list-methods {
@@ -105,6 +114,7 @@
     &__list-img {
         width: 14px;
         height: 7px;
+        transition: 1s;
     }
 }
 
@@ -134,11 +144,22 @@
         flex-direction: column;
         justify-content: space-between;
         margin-top: 50px;
-        height: 200px;
+        max-height: 900px;
 
     }
 
     &__item-solo {
+        // display: flex;
+        // flex-direction: row;
+        // justify-content: space-between;
+        // align-items: center;
+
+        font-weight: 600;
+        font-size: $font-size-text;
+        line-height: 24px;
+    }
+
+    &__item-solo-header {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -147,11 +168,46 @@
         font-weight: 600;
         font-size: $font-size-text;
         line-height: 24px;
+
+        cursor: pointer;
+    }
+
+    &__items-checkbox {
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 18px;
+
+        color: $color-grey-dark;
+
+        margin: 20px 0 20px 20px;
+
+        overflow: hidden;
+        max-height: 0;
+
+        transition: 0.5s;
+        
+    }
+
+    &__items-for-solo {
+        padding-top: 10px;
+
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 18px;
+
+        & label {
+            display: block;
+            width: 100%;
+        }
+
+        
+
     }
 
     &__img {
         width: 18px;
         height: 9px;
+        transition: 1s;
     }
 
     &__btn {
@@ -278,3 +334,57 @@
     }
 }
 
+//animation
+
+.animation-left-block {
+    max-height: 500px;
+    transition: 1s;
+};
+
+.animation-rotate {
+    transform: rotate(180deg);
+    transition: 1s;
+}
+
+.sort-menu {
+    width: 160px;
+    max-height: 0px;
+    background-color: #fff;
+    position: absolute;
+    right: 180px;
+    top: 310px;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid #fff;
+
+    transition: 1s;
+    &__elem-container {
+        height: 38px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 15px;
+
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 18px;
+        color: #878787;
+
+        &:nth-child(2) {
+            border-top: 1px solid #878787;
+            border-bottom: 1px solid #878787;
+        }
+    }
+}
+
+.super-animation {
+    border: 1px solid #878787;
+    max-height: 114px;
+    transition: 1s;
+
+    cursor: pointer;
+}
