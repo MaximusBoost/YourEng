@@ -1,0 +1,58 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.main {
+  width: 1400px;
+  height: 100vh;
+  background-color: #878787;
+  margin: auto;
+  font-family: "Montserrat", sans-serif;
+}
+
+.header {
+  width: 100%;
+  height: 80px;
+  background-color: #0E110D;
+  color: #F7F8F7;
+}
+
+.header__logo {
+  position: absolute;
+  left: 150px;
+  top: 28px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.1em;
+}
+
+.header__span-green {
+  color: #005C3D;
+}
+
+.header__medium-text {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  width: 365px;
+  margin: auto;
+  padding-top: 32px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 50px;
+}
+
+.header__personal-cabinet {
+  position: absolute;
+  left: 1167px;
+  top: 32px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+/*# sourceMappingURL=/header.c3c06600.css.map */

@@ -1,6 +1,14 @@
 /img
 /YourEng.fig
 /.cache
-/dist
 /node_modules
-package-lock.json
+/package-lock.json
+/components
+/constants
+/technicalFunctions
+/_null.scss
+/index.html
+/index.js
+/index.scss
+/package__.json
+package.json

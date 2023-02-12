@@ -6,7 +6,7 @@ class FreeLesson{
         let htmlContent = ` 
             <div class="modal" id="modal-container" data-close="true">
                 <div class="modal__body _container" >
-                    <img src=".${close}" alt="close" class="modal__close" data-close="true">
+                    <img src="${close}" alt="close" class="modal__close" data-close="true">
                     <div class="modal__container">
                         <h3 class="modal__title">Бесплатное пробное занятие</h3>
                         <form action="#" class="modal__form" id="form-free-lesson">
