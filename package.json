@@ -3,11 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "start": "parcel index.html --open",
-    "build": "parcel build index.html --no-source-maps --no-cache --public-url ."
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/MaximusBoost/YourEng.git"
+    "build": "parcel build index.html --no-source-maps --no-cache --no-minify --public-url . "
   },
   "author": "bekandmov",
   "license": "ISC",

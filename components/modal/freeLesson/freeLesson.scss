@@ -90,7 +90,6 @@
         padding: 16px 0 16px 25px;
         width: 45%;
         margin: 20px;
-        
 
         &_name {
             &._error{
@@ -168,6 +167,16 @@
         width: 289px;
         height: 48px;
         margin: 32px 0 40px 0;
+    }
+
+    &__vector{
+        position: absolute;
+        top: 30%;
+        left: 91%;
+        cursor: pointer;
+        &:hover{
+            filter: brightness(0.5) invert(0.5);
+        }
     }
 }
 
