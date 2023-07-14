@@ -37,6 +37,12 @@
         transition: all .5s ease 0s;
         max-height: 80px;
         padding: 25px 0 0 0;
+        @media (max-width:768px) {
+            max-height: 140px;
+        }
+        @media (max-width:480px) {
+            max-height: 200px;
+        }
     }
 
 }

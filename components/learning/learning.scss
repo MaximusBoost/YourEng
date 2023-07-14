@@ -5,10 +5,18 @@
 
 .learning_title{
     padding-top: 60px;
-    h2{
-        font-size: 45px;
-        font-weight: 700;
+    font-size: 45px;
+    font-weight: 700;
+    @media (max-width:999px) {
+        font-size: 35px;
     }
+    @media (max-width:768px) {
+        font-size: 30px;
+    }
+    @media (max-width:480px) {
+        font-size: 25px;
+    }
+
 }
 .learning_content{
     display: flex;
@@ -16,6 +24,9 @@
         counter-reset: ol-numbers;
         li:last-child{
             padding-bottom: 60px;
+            @media (max-width:768px) {
+                padding-bottom: 0;
+            }
         }
         li{
             position: relative;
@@ -36,8 +47,21 @@
     .learning_image{
         padding: 67px 0 0 76px;
         img{
-            max-width: 100%;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
         }
+        @media (max-width:999px) {
+            padding: 0;
+            width: 45%;
+        }
+        @media (max-width:768px) {
+            display: none;
+        }
+    }
+
+    @media (max-width:999px) {
+        flex-direction: column;
     }
 }
 
@@ -54,10 +78,32 @@
         font-size: 18px;
         max-width: 427px;
         line-height: 140%;
+        @media (max-width:999px) {
+            max-width: 100%;
+            font-size: 16px;
+        }
+        @media (max-width:768px) {
+            font-size: 14px;
+        }
+        @media (max-width:480px) {
+            font-size: 12px;
+        }
+        
     }
 }
 
 .learning {
+
+    &__right-container{
+        @media (max-width:999px) {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-around;
+        }
+        @media (max-width:768px) {
+            display: block;
+        }
+    }
 
     &__after-lesson {
         max-width: 35%;
@@ -70,14 +116,31 @@
         border-top: 2px solid black;
         border-bottom: 2px solid black;
         background-color: $color-white;
+        @media (max-width:999px) {
+            position: relative;
+            padding: 0;
+            border: none;
+            top: 0;
+            left: 0;
+        }
+        @media (max-width:768px) {
+            padding-left: 65px;
+            max-width: 65%;
+            padding-bottom: 60px;
+        }
+        @media (max-width:480px) {
+            max-width: 100%;
+        }
     }
 }
 .after-lesson {
+    margin: auto 0;
 
     &__title {
         font-weight: 500;
         font-size: 20px;
         padding: 35px 0 18px 0;
+        font-weight: bold;
     }
 
     &__container {
@@ -88,10 +151,19 @@
         font-size: 15px;
         padding: 5px 0;
         position: relative;
+        @media (max-width:999px) {
+            font-size: 16px;
+        }
+        @media (max-width:768px) {
+            font-size: 14px;
+        }
+        @media (max-width:480px) {
+            font-size: 12px;
+        }
         &::before{
             content:  "";
             position: absolute;
-            right: 104%;
+            left: -25px;
             bottom: 23%;
 
             background-image: url(~/components/learning/img/check-element.svg);
