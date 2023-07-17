@@ -13,4 +13,5 @@ document.addEventListener('DOMContentLoaded', function() {
     TechnicalFunctions.addListenerForFreeLesson()
     TechnicalFunctions.addListenerDataClose()
     MySwiper.addInitialization()
+    
 })
