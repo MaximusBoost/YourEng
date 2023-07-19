@@ -1,0 +1,53 @@
+.about-us-section {
+    width: 100%;
+    height: 630px;
+    background-color: var(--color-white);
+}
+
+.about-us-section__advantages {
+    position: relative;
+    left: 150px;
+    top: 60px;
+    width: 1084px;
+    height: 510px;
+
+    background-color: aquamarine;
+}
+
+.about-us-section__item {
+    position: absolute;
+    left: 150px;
+    top: 60px;
+    width: 446px;
+    height: 145px;
+
+    background-color: blue;
+}
+
+.about-us-section__item__image{
+    position: relative;
+    top: 22px;
+    left: 14px;
+
+    width: 72px;
+    height: 55.99px;
+}
+
+.about-us-section__item-name {
+    position: absolute;
+    left: 113px;
+
+    font-weight: var(--font-weight-h1-h2-h3);
+    font-size: var(--font-size-h3);
+    line-height: 30px;
+}
+
+.about-us-section__text {
+    position: relative;
+    top: 45px;
+    left: 113px;
+
+    font-weight: var(--font-weight-text);
+    font-size: 18px;
+    line-height: 140%;
+}
