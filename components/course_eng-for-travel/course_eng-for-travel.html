@@ -7,18 +7,26 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./course_eng-for-travel.scss">
-    <link rel="stylesheet" href="./feedback/feedback.scss">
-    <link rel="stylesheet" href="./course-program/course-program.scss">
-    <link rel="stylesheet" href="./rates/rates.scss">
-    <link rel="stylesheet" href="./standarts/standarts.scss">
+    <link rel="stylesheet" href="./course-index.scss">
     <title>YourEng</title>
 </head>
 <body>
 
     <div class="main">
 
-        <div class="header">
+        <div class="header__backdropfilter">
+
+            <div class="header__menu-burger">
+                <div class="header__menu-box">
+                    <a href="#" class="header__menu-burger-link">Курсы</a>
+                    <a href="#" class="header__menu-burger-link">Преподаватели</a>
+                    <a href="#" class="header__menu-burger-link">Мероприятия</a>
+                    <a href="#" class="header__menu-burger-link">Личный код</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="header" style="display: none;">
             <div class="header__logo" >
                 <a href="../../index.html" class="footer__logo-link"><span>Your</span><span class="header__span-green">Eng</span></a>
             </div>
@@ -29,7 +37,7 @@
 
         </div>
 
-        <div class="full-screen-wrapper">
+        <div class="full-screen-wrapper" style="display: none;">
             <div class="full-screen">
                 
 
@@ -46,7 +54,7 @@
                         <div class="full-screen_read-area">
                             <p class="full-screen__text-big">Английский<br>для путешествий</p>
                             <p class="full-screen__text-small">Запишитесь на бесплатное пробное<br>занятие и познакомьтесь c YourEng</p>
-                            <a href="#" class="_link-green full-screen__link-size"><span>Записаться</span></a>
+                            <a href="#" class="_link-green full-screen__link-size" id="full-screen-record"><span>Записаться</span></a>
                         </div>
 
                     </div>
@@ -66,7 +74,7 @@
             </div>
         </div>
 
-        <div class="advantages _container">
+        <div class="advantages _container" style="display: none;">
             <div class="advantages__body">
 
                 <div class="advantages__card" >
@@ -105,7 +113,7 @@
             </div>
         </div>
 
-        <div class="structure-lesson">
+        <div class="structure-lesson" style="display: none;">
 
             <div class="structure-lesson__container">
 
@@ -142,7 +150,7 @@
 
         </div>
 
-        <div class="feedbacks">
+        <div class="feedbacks" style="display: none;">
             <div class="feedbacks__container">
 
             <p class="feedbacks__heading-text">Отзывы</p>
@@ -221,7 +229,7 @@
             </div>
         </div>
 
-        <div class="course-program">
+        <div class="course-program" style="display: none;">
 
             <div class="course-program__container">
                 <div class="course-program__head">
@@ -373,7 +381,7 @@
                         себе тариф, исходя из ваших целей. 
                         Давайте сделаем это прямо сейчас!
                     </div>
-                    <div class="rates__text-second">Ответься на несколько вопросов <br>
+                    <div class="rates__text-second">Ответься на несколько вопросов
                         и узнайте сколько будут стоить 
                         занятия по выбранной программе.
                     </div>
@@ -386,7 +394,7 @@
             </div>
         </div>
 
-        <div class="standarts">
+        <div class="standarts" style="display: none;">
 
             <div class="standarts__container">
 
@@ -459,7 +467,7 @@
 
         </div>
 
-        <footer class="footer">
+        <footer class="footer" style="display: none;">
             <div class="footer__container _container">
                 <div class="footer__logo header__logo" >
                     <span>Your</span><span class="header__span-green">Eng</span>

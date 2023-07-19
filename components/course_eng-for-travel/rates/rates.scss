@@ -1,77 +1,115 @@
-@import '../course_eng-for-travel.scss';
+// @import '../course_eng-for-travel.scss';
 
-.rates {
+// .rates {
 
-    max-height: 435px;
-    background-color: $color-black-dark;
-    color: $color-white;
+//     max-height: 435px;
+//     background-color: $color-black-dark;
+//     color: $color-white;
 
-    &__container {
-        max-width: 1140px;
-        margin: 0 auto;
-        display: flex;
-        flex-direction: row;
-    }
+//     &__container {
+//         max-width: 1140px;
+//         margin: 0 auto;
+//         display: flex;
+//         flex-direction: row;
+//     }
 
-    &__left-part {
-        width: 50%;
+//     &__left-part {
+//         width: 50%;
 
-    }
+//     }
 
-    &__heading {
-        font-weight: 700;
-        font-size: 45px;
-        line-height: 55px;
-        padding-top: 40px;
-    }
+//     &__heading {
+//         font-weight: 700;
+//         font-size: 45px;
+//         line-height: 55px;
+//         padding-top: 40px;
+//     }
 
-    &__text-first {
-        max-width: 343px;
-        max-height: 75px;
-        margin-top: 40px;
+//     &__text-first {
+//         max-width: 343px;
+//         max-height: 75px;
+//         margin-top: 40px;
 
-        font-weight: 400;
-        font-size: 18px;
-        line-height: 140%;
+//         font-weight: 400;
+//         font-size: 18px;
+//         line-height: 140%;
 
-    }
+//     }
 
-    &__text-second {
-        max-width: 343px;
-        max-height: 75px;
-        margin-top: 17px;
+//     &__text-second {
+//         max-width: 343px;
+//         max-height: 75px;
+//         margin-top: 17px;
 
-        font-weight: 400;
-        font-size: 18px;
-        line-height: 140%;
-    }
+//         font-weight: 400;
+//         font-size: 18px;
+//         line-height: 140%;
+//     }
 
-    &__btn {
+//     &__btn {
 
-        width: 197px;
-        height: 48px;
-        margin-bottom: 48px;
+//         width: 197px;
+//         height: 48px;
+//         margin-bottom: 48px;
 
-        background: $color-green-light;
-        border-radius: 5px;
+//         background: $color-green-light;
+//         border-radius: 5px;
 
-        margin-top: 27px;
-        text-align: center;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+//         margin-top: 27px;
+//         text-align: center;
+//         display: flex;
+//         justify-content: center;
+//         align-items: center;
 
-        font-weight: 500;
-        font-size: 15px;
-        line-height: 18px;
+//         font-weight: 500;
+//         font-size: 15px;
+//         line-height: 18px;
 
-    }
+//     }
 
-    &__right-part {
-    }
+//     &__right-part {
+//     }
 
-    &__happy-girl {
-        margin-top: 52px;
-        padding-right: 53px;
-    }
-}
+//     &__happy-girl {
+//         margin-top: 52px;
+//         padding-right: 53px;
+//     }
+// }
+
+// @media (max-width: 1163px) {
+    
+//     .rates {
+
+// 		&__container {
+// 		}
+
+// 		&__left-part {
+//             width: fit-content;
+// 		}
+
+// 		&__heading {
+// 		}
+
+// 		&__text-first {
+// 		}
+
+// 		&__text-second {
+// 		}
+
+// 		&__btn {
+// 		}
+
+// 		&__right-part {
+//             // display: flex;
+//             // justify-content: flex-end;
+//             flex-grow: 1;
+// 		}
+
+// 		&__happy-girl {
+//             padding-right: 0;
+//             // margin: 52px 0 0 auto;
+            
+// 		}
+// }
+
+// }

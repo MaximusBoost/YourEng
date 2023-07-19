@@ -1,13 +1,8 @@
-@import '../../null.scss';
-@import '../../index.scss';
-@import '../../constants/root';
-@import '../courses/components/chooseCourse/chooseCourse.scss';
-
-
 .full-screen-wrapper {
     background-color: #000;
     height: 600px;
 };
+
 .full-screen {
 
 		&_read-area {
@@ -39,8 +34,7 @@
 		&__span {
 		}
 }
-.full-screen-content {
-}
+
 .choose-course {
 
 		&__navigation {
@@ -55,7 +49,6 @@
             color: $color-white;
 		}
 }
-
 
 .advantages {
 
@@ -198,7 +191,6 @@
     }
 }
 
-
 .animation-img {
     &__1 {
         right: 1140px;
@@ -242,4 +234,211 @@
         background-color: $color-green-dark;
         cursor: pointer;
     }
+}
+
+.rates {
+
+    max-height: 435px;
+    background-color: $color-black-dark;
+    color: $color-white;
+
+    &__container {
+        max-width: 1140px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+    }
+
+    &__left-part {
+        width: 50%;
+
+    }
+
+    &__heading {
+        font-weight: 700;
+        font-size: 45px;
+        line-height: 55px;
+        padding-top: 40px;
+    }
+
+    &__text-first {
+        max-width: 343px;
+        max-height: 75px;
+        margin-top: 40px;
+
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 140%;
+
+    }
+
+    &__text-second {
+        max-width: 343px;
+        max-height: 75px;
+        margin-top: 17px;
+
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 140%;
+    }
+
+    &__btn {
+
+        width: 197px;
+        height: 48px;
+        margin-bottom: 48px;
+
+        background: $color-green-light;
+        border-radius: 5px;
+
+        margin-top: 27px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 18px;
+
+    }
+
+    &__right-part {
+    }
+
+    &__happy-girl {
+        margin-top: 52px;
+        padding-right: 53px;
+    }
+}
+
+@media (max-width: 1163px) {
+    
+    .rates {
+
+		&__container {
+            padding: 0 15px;
+		}
+
+		&__left-part {
+            width: fit-content;
+		}
+
+		&__right-part {
+            flex-grow: 1;
+		}
+
+		&__happy-girl {
+            padding-right: 0;
+            margin: 52px 0 0 auto;
+            display: block;
+		}
+    }
+
+}
+
+@media (max-width: 938px) {
+    
+    .rates {
+
+		&__container {
+            padding: 0 15px;
+		}
+
+        &__heading {
+            font-size: 35px;
+        }
+
+        &__text-first {
+            font-size: 15px;
+        }
+
+        &__text-second {
+            font-size: 15px;
+        }
+
+		&__left-part {
+            width: fit-content;
+		}
+
+		&__right-part {
+            flex-grow: 1;
+		}
+
+		&__happy-girl {
+            padding-right: 0;
+            margin-top: 0;
+            display: block;
+            // width: 444px;
+            // height: 224px;
+            height: 100%;
+            width: 100%;
+            object-fit: contain;
+		}
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .rates {
+
+		&__left-part {
+            flex-shrink: 0;
+		}
+
+		&__heading {
+            padding-top: 10px;
+		}
+    }
+
+
+}
+
+@media (max-width: 645px) {
+    .rates {
+
+        max-height: fit-content;
+
+		&__container {
+		}
+
+		&__left-part {
+            width: 100%;
+		}
+
+		&__heading {
+		}
+
+		&__text-first {
+            margin-right: 0;
+            width: 100%;
+            max-width: none;
+            text-align: justify;
+            font-size: 22px;
+            max-height: fit-content;
+		}
+
+		&__text-second {
+            margin-right: 0;
+            width: 100%;
+            max-width: none;
+            text-align: justify;
+            font-size: 22px;
+            max-height: fit-content;
+		}
+
+		&__btn {
+            margin-bottom: 20px;
+            width: 100%;
+		}
+
+		&__right-part {
+            display: none;
+		}
+
+		&__happy-girl {
+		}
+    }
+
 }

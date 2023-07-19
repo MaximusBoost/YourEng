@@ -34,3 +34,51 @@
         line-height: 140%;
     }
 }
+
+
+@media (max-width: 844px) {
+    .advantages {
+
+		&__card {
+            padding-right: 80px;
+		}
+
+		&__title {
+            font-size: 22px;
+		}
+
+		&__subtitle {
+            font-size: 14px;
+		}
+
+    }
+
+}
+
+@media (max-width: 656px) {
+    .advantages {
+
+		&__body {
+            flex-direction: column;
+		}
+
+		&__card {
+            max-width: 100%;
+		}
+    }
+
+}
+
+@media (max-width: 411px) {
+    .advantages {
+        
+        &__body {
+            padding: 60px 0 60px 80px;
+
+        }
+
+        &__card {
+            padding-right: 20px;
+        }
+    }
+}
