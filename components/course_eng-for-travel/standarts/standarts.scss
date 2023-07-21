@@ -1,8 +1,6 @@
-@import '../course_eng-for-travel.scss';
-
 .standarts {
 
-    max-height: 660px;
+    // max-height: 660px;
     background-color: $color-white;
 
     &__container {
@@ -29,6 +27,10 @@
         width: 367px;
         height: 408px;
         margin-top: 60px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        // padding-bottom: 15px;
 
         border-width: 2px 0px;
         border-style: solid;
@@ -71,6 +73,7 @@
         flex-direction: row;
         justify-content: space-between;
         padding-right: 20px;
+        padding-bottom: 15px;
 
         font-weight: $font-weight-text;
         font-size: 15px;
@@ -79,12 +82,13 @@
         & span {
             font-weight: $font-weight-h1-h2-h3;
         }
+
+        justify-self: end;
     }
 
     &__btn {
         width: 158px;
         height: 38px;
-        margin-top: 10px;
 
         font-weight: 400;
         font-size: 15px;
@@ -100,4 +104,99 @@
             cursor: pointer;
         }
     }
+}
+
+@media (max-width: 1136px) {
+    
+    .standarts {
+
+		&__container {
+            padding: 0 10px;
+		}
+
+		&__items {
+            min-height: 412px;
+            height: fit-content;
+            padding-bottom: 15px;
+            width: 333px;
+		}
+
+    }
+
+}
+
+@media (max-width: 1031px) {
+    .standarts {
+
+		&__items {
+            width: 276px;
+            min-height: 343px;
+		}
+
+		&__item-description {
+            font-size: 12px;
+            padding-top: 0;
+		}
+
+		&__price-btn {
+
+            padding-top: 0;
+
+            & p {
+                font-size: 12px;
+            }
+		}
+
+		&__btn {
+            font-size: 12px;
+		}
+    }
+
+}
+
+@media (max-width: 856px) {
+    .standarts {
+
+		&__container-items {
+            flex-direction: column;
+		}
+
+		&__items {
+            width: 100%;
+		}
+
+		&__item-heading {
+            font-size: 30px;
+		}
+
+		&__item-description {
+            font-size: 20px;
+            padding-top: 22px;
+		}
+
+		&__price-btn {
+           
+            & p {
+                font-size: 18px;
+            }
+		}
+
+		&__btn {
+            font-size: 16px;
+		}
+    }
+
+}
+
+@media (max-width: 340px) {
+    .standarts {
+
+		&__price-btn {
+            & p {
+                font-size: 15px;
+            }
+		}
+		
+    }
+
 }

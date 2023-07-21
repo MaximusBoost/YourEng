@@ -1,14 +1,20 @@
 @import '../../../../constants/_root';
 
-.choose-course {
-    width: 100%;
-    height: 245px; // из-за padding-top увеличили на 10px
-    background-color: $color-white;
-    padding-top: 10px;
+.full-screen{
+    display: flex;
+    flex-direction: column;
+
 }
 
 .choose-course {
+    width: 100%;
+    // height: 245px; // из-за padding-top увеличили на 10px
+    background-color: $color-white;
+    
+}
 
+.choose-course {
+    padding: 0 10px;
     &__navigation {
         display: flex;
     }
@@ -37,12 +43,37 @@
         font-weight: 700;
         font-size: 45px;
         line-height: 55px;
+        @media (max-width:999px) {
+            margin-top: 50px;
+            font-size: 35px;
+        }
+        @media (max-width:768px) {
+            margin-top: 40px;
+            font-size: 30px;
+            line-height: normal;
+        }
+        @media (max-width:480px) {
+            margin-top: 30px;
+            font-size: 25px;
+        }
+        @media (max-width:360px) {
+            font-size: 20px;
+        }
+
     }
 
     &__search {
-        // border: solid 3px green;
-        margin-top: 40px;
-        
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        @media (max-width:768px) {
+            margin: 20px 0;
+            justify-content: center;
+        }
+        @media (max-width:500px) {
+            justify-content: start;
+        }
     }
 
     &__input {
@@ -50,8 +81,6 @@
         height: 50px;
 
         padding-left: 30px;
-
-        float: left;
 
         border: 1px solid #000000;
         border-radius: 5px 0px 0px 5px;
@@ -66,8 +95,17 @@
             line-height: 15px;
 
             color: $color-grey-dark;
-            
-            
+        }
+
+        @media (max-width:999px) {
+            width: 40%;
+        }
+        @media (max-width:768px) {
+            width: 65%;
+        }
+
+        @media (max-width:360px) {
+            padding-left: 10px;
         }
 
     }
@@ -75,23 +113,44 @@
     &__btn {
         width: 158px;
         height: 50px;
+        position: absolute;
+        top: 0;
+        left: 35%;
 
         color: #fff;
 
-        float: left;
+        // transform: translateX(-5px);
 
         background: $color-green-light;
         border-radius: 0px 5px 5px 0px;
+        transition: all .3s ease;
+
+        &:hover{
+            background-color: $color-green-dark;
+        }
+
+        @media (max-width:768px) {
+            left: 64%;
+        }
+        @media (max-width:500px) {
+            width: 100px;
+        }
     }
 
     &__sort {
         height: 50px;
 
-        display: flex;
+        display: inline-flex;
         
         flex-direction: row;
         align-items: center;
         justify-content: flex-end;
+
+        position: relative;
+        
+        @media (max-width:768px) {
+            display: none;
+        }
 
        & img {
         cursor: pointer;
@@ -114,23 +173,47 @@
     &__list-img {
         width: 14px;
         height: 7px;
-        transition: 1s;
+        transition: all .3s ease;
     }
 }
 
 .course-list {
-    height: 1393px;
+    // height: 1393px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding-top: 70px; //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    padding: 70px 10px 0 10px;
 
     background-color: $color-white;
+
+    @media (max-width:999px) {
+        display: block;
+    }
+
+    @media (max-width:768px) {
+        padding: 0 10px;
+    }
+
+    &__title{
+        @media (max-width:999px) {
+            font-size: 18px;
+            padding: 15px 0 10px 0;;
+        }
+        @media (max-width:768px) {
+            font-size: 16px;
+        }
+        @media (max-width:480px) {
+            font-size: 15px;
+        }
+    }
 
 
     &__filters {
         width: 270px;
         height: 421px;
+        @media (max-width:999px) {
+            display: none;
+        }
     }
 
     &__filter-main {
@@ -149,11 +232,6 @@
     }
 
     &__item-solo {
-        // display: flex;
-        // flex-direction: row;
-        // justify-content: space-between;
-        // align-items: center;
-
         font-weight: 600;
         font-size: $font-size-text;
         line-height: 24px;
@@ -184,7 +262,7 @@
         overflow: hidden;
         max-height: 0;
 
-        transition: 0.5s;
+        transition: all .3s ease;
         
     }
 
@@ -207,7 +285,7 @@
     &__img {
         width: 18px;
         height: 9px;
-        transition: 1s;
+        transition: all .3s ease;
     }
 
     &__btn {
@@ -224,6 +302,12 @@
         font-size: 16px;
         line-height: 20px;
 
+        transition: all .3s ease;
+
+        &:hover{
+            background-color: $color-green-dark;
+        }
+
     }
 
     &__reset {
@@ -233,22 +317,43 @@
         margin-top: 30px;
 
         text-decoration-line: underline;
+        cursor: pointer;
     }
 
     &__cards{
-        width: 775px;
-        height: 1143px;
+        width: 767px;
 
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-between;
+
+        @media (max-width:768px) {
+            width: 90%;
+        }
+
+        @media (max-width:500px) {
+            flex-direction: column;
+        }
     }
 
     &__size-lesson{
         width: 366px;
-        height: 381px;
+        height: fit-content;
         margin: 0;
+
+        img{
+            @media (max-width:768px) {
+                padding-bottom: 0;
+            }
+        }
+        @media (max-width:999px) {
+            width: 49%;
+        }
+
+        @media (max-width:500px) {
+            width: 100%;
+        }
     }
 
     &__price-lesson{
@@ -268,18 +373,61 @@
             font-weight: 400;
         }
     }
+    &__right-part-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 auto;
+        margin-bottom: 110px;
+
+        @media (max-width:999px) {
+            margin-bottom: 90px;
+        }
+        @media (max-width:768px) {
+            margin-bottom: 70px;
+        }
+        @media (max-width:480px) {
+            margin-bottom: 50px;
+        }
+        @media (max-width:360px) {
+            margin-bottom: 30px;
+        }
+    }
 
     &__number-page{
-        position: relative;
-        top: 1193px;
-        right: 452px;
+        display: flex;
+        gap: 15px;
+        margin-top: 50px;
 
-        height: 130px;
+        li{
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: 600;
+            &:hover{
+                color: $color-green-light;
+            }
+        }
+    }
+
+    &__footer{
+        @media (max-width:768px) {
+            flex-direction: column;
+            padding: 0;
+            div{
+                width: 100%;
+                
+            }
+            a{
+                margin: 10px auto 10px auto;
+
+            }
+        }
     }
 
 }
 
 .card { //колхоз
+    animation: visible .5s linear forwards;
     
     &:nth-last-child(-n + 3) {
         border-bottom: none;
@@ -297,7 +445,7 @@
 }
 
 .footer{
-    height: 345px;
+    // height: 345px;
 }
 
 .drop-list {
@@ -338,12 +486,12 @@
 
 .animation-left-block {
     max-height: 500px;
-    transition: 1s;
+    transition: all .3s ease;
 };
 
 .animation-rotate {
     transform: rotate(180deg);
-    transition: 1s;
+    transition: all .3s ease;
 }
 
 .sort-menu {
@@ -351,8 +499,8 @@
     max-height: 0px;
     background-color: #fff;
     position: absolute;
-    right: 180px;
-    top: 310px;
+    right: 0;
+    top: 40px;
     overflow: hidden;
 
     display: flex;
@@ -360,7 +508,7 @@
     justify-content: space-between;
     border: 1px solid #fff;
 
-    transition: 1s;
+    transition: all .3s ease;
     &__elem-container {
         height: 38px;
 
@@ -383,8 +531,23 @@
 
 .super-animation {
     border: 1px solid #878787;
-    max-height: 114px;
-    transition: 1s;
+    max-height: 83px;
+    transition: all .3s ease;
 
     cursor: pointer;
+}
+
+._li-active{
+    color: $color-green-dark !important;
+    text-decoration: underline;
+}
+
+@keyframes visible {
+    0% {
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
 }

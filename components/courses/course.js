@@ -1,5 +1,5 @@
 'use strict'
-
+import ChooseCourse from "./components/ChooseCourse";
 class DropDownList{
     addEventListennerFilter() {
         let clickElems = document.querySelectorAll('.course-list__item-solo-header');
@@ -35,5 +35,6 @@ class DropDownList{
 let callThisFunc = new DropDownList;
 callThisFunc.addEventListennerFilter();
 callThisFunc.addEventListenner();
+ChooseCourse.addListenerForChangePage()
 
 export default new DropDownList();

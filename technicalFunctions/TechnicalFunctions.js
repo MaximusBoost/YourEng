@@ -64,7 +64,15 @@ class TechnicalFunctions {
                     FreeLesson.close();
                 };
             });
+            let inputTel = document.querySelector('.modal__input_phone');
+
+            inputTel.addEventListener('keyup', function(event) {
+                if(event.key != 'Backspace' && (inputTel.value.length === 1 || inputTel.value.length === 5 || inputTel.value.length === 9 || inputTel.value.length === 12)) {
+                    inputTel.value += '-'
+                }
+            })
         });
+
     };
 };
 

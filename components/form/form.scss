@@ -30,12 +30,20 @@
     &__form {
         display: flex;
         flex-direction: column;
+        padding-right: 10px;
+        @media (max-width:999px) {
+            padding-right: 0;
+        }
     }
 
     &__title {
         font-weight: $font-weight-h1-h2-h3;
         font-size: $font-size-h3;
         padding: 50px 0 25px 0; 
+        line-height: 130%;
+        @media (max-width:480px) {
+            font-size: 22px;
+        }
     }
 
     &__subtitle {
@@ -43,11 +51,25 @@
         line-height: 140%;
         padding-bottom: 52px;
         width: 54%;
+        @media (max-width:999px) {
+            width: 75%;
+        }
+        @media (max-width:480px) {
+            font-size: 14px;
+        }
     }
 
     &__send-form{
         display: flex;
         flex-direction: column;
+        @media (max-width:999px) {
+            input{
+                max-width: 100%;
+            }
+            textarea{
+                max-width: 100%;
+            }
+        }
         
         input:focus, textarea:focus{
             box-shadow: 0 0 15px #7a956b;
@@ -122,11 +144,21 @@
         max-width: 560px;
         display: flex;
         justify-content: space-between;
+        @media (max-width:999px) {
+            max-width: 100%;
+        }
+        @media (max-width:768px) {
+            flex-direction: column-reverse;
+            padding-top: 20px;
+        }
     }
 
     &__icons {
         display: flex;
         align-items: center;
+        @media (max-width:768px) {
+            padding-top: 20px;
+        }
     }
 
     &__icon{
@@ -141,6 +173,9 @@
     &__button {
         width: 270px;
         height: 47px;
+        @media (max-width:768px) {
+            width: 100%;
+        }
     }
 
     &__picture{
@@ -150,6 +185,9 @@
             &:first-child{
                 padding: 50px 0 30px 0;
             }
+        }
+        @media (max-width:999px) {
+            display: none;
         }
     }
 }

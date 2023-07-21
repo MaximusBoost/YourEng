@@ -6,18 +6,31 @@ class FreeLesson{
         let htmlContent = ` 
             <div class="modal" id="modal-container" data-close="true">
                 <div class="modal__body _container" >
-                    <img src=".${close}" alt="close" class="modal__close" data-close="true">
+                    <img src="${close}" alt="close" class="modal__close" data-close="true">
                     <div class="modal__container">
                         <h3 class="modal__title">Бесплатное пробное занятие</h3>
                         <form action="#" class="modal__form" id="form-free-lesson">
-                            <input class="modal__input modal__input_name _modal-req" placeholder="Имя" data-input="true">
-                            <img src="${star}" alt="star" class="modal__star1">
-                            <input class="modal__input modal__input_birthday _modal-req" placeholder="Выберите дату рождения" data-input="true">
-                            <img src="${star}" alt="star" class="modal__star2">
-                            <input class="modal__input modal__input_phone" placeholder="+7 (___)-___-__-__" data-input="true">
-                            <input class="modal__input modal__input_email _modal-req _modal-email" placeholder="example@mail.ru" data-input="true">
-                            <img src="${star}" alt="star" class="modal__star3" data-input="true">
+                            <div class="modal__input-container">
+                                <input class="modal__input modal__input_name _modal-req" placeholder="Имя" data-input="true">
+                                <img src="${star}" alt="star">
+                            </div>
+                            <div class="modal__input-container">
+                                <input class="modal__input modal__input_birthday _modal-req" placeholder="Введите дату рождения" data-input="true">
+                                <img src="${star}" alt="star">
+                            </div>
+                            <div class="modal__input-container">
+                                <input class="modal__input modal__input_phone" placeholder="+7 (___)-___-__-__" type="tel" data-input="true" maxlength="15">
+                            </div>
+                            
+                            <div class="modal__input-container">
+                                <input class="modal__input modal__input_email _modal-req _modal-email" placeholder="example@mail.ru" type="email" data-input="true">
+                                <img src="${star}" alt="star" data-input="true">
+                            </div>
+
+
                             <textarea class="modal__input modal__input_textarea" placeholder="Сообщение" maxlength="140" data-input="true"></textarea>
+
+                            
                             <p class="modal__paragraph"><img src="${star}" alt="star"> Поля, обязательные для заполнения</p>
                             <button class="modal__button _button-green">Записаться</button>
                         </form>

@@ -34,25 +34,38 @@
 		&__span {
 		}
 }
-
-.choose-course {
-
-		&__navigation {
-            padding-top: 20px;
-		}
-
-		&__navigation-main {
-            color: $color-white;
-		}
-
-		&__navigation-course {
-            color: $color-white;
-		}
+.full-screen-content {
+}
+.choose-header {
+    &__navigation {
+        display: flex;
+        padding-top: 20px;
+    }
+    
+    &__navigation-main {
+        color: $color-grey-dark;
+        font-weight: $font-weight-text;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        color: #FFFFFF;
+    }
+    
+    &__navigation-img {
+    }
+    
+    &__navigation-course {
+        color: $color-grey-dark;
+        font-weight: $font-weight-names_of_card;
+        font-size: 14px;
+        line-height: 17px;
+        color: #FFFFFF;
+    }
 }
 
 .advantages {
 
-    background-color: $color-white;
+    background-color: #FFFFFF;
 
     &__card {
 
@@ -69,7 +82,7 @@
 
 .structure-lesson {
 
-    background-color: $color-white-light;
+    background-color: #F7F8F7;
     max-height: 776px;
 
     &__container {
@@ -78,25 +91,61 @@
 
         display: flex;
         flex-direction: row;
+
+        @media (max-width: 999px) {
+            flex-direction: column;
+            align-items: center;
+        }
     }
 
     &__left-part {
         width: 50%;
-        padding-left: 30px;
+        padding: 0 20px;
+        @media (max-width: 999px) {
+            width: 100%;
+        }
     }
 
     &__title {
-        font-weight: $font-weight-h1-h2-h3;
+        font-weight: 700;
         font-size: 45px;
         line-height: 55px;
         padding-top: 60px;
+        @media (max-width: 999px) {
+            font-size: 40px;
+            line-height: normal;
+            padding-top: 40px;
+        }
+        @media (max-width: 768px) {
+            font-size: 35px;
+            padding-top: 20px;
+        }
+        @media (max-width: 480px) {
+            font-size: 30px;
+        }
+        @media (max-width: 360px) {
+            font-size: 25px;
+        }
     }
 
     &__under-title {
         font-weight: 600;
-        font-size: $font-size-h3;
+        font-size: 25px;
         line-height: 30px;
         padding-top: 40px;
+        @media (max-width: 999px) {
+            line-height: normal;
+            padding-top: 20px;
+        }
+        @media (max-width: 768px) {
+            font-size: 20px;
+        }
+        @media (max-width: 480px) {
+            font-size: 18px;
+        }
+        @media (max-width: 360px) {
+            font-size: 16px;
+        }
     }
 
     &__choose-data {
@@ -110,6 +159,19 @@
         font-size: 200px;
         line-height: 244px;
         color: #005C3D;
+        @media (max-width: 999px) {
+            font-size: 170px;
+            line-height: normal;
+        }
+        @media (max-width: 768px) {
+            font-size: 140px;
+        }
+        @media (max-width: 480px) {
+            font-size: 110px;
+        }
+        @media (max-width: 360px) {
+            font-size: 80px;
+        }
     }
 
     &__data-number-text {
@@ -119,7 +181,7 @@
 
     &__choose-data-heading {
         font-weight: 700;
-        font-size: $font-size-h3;
+        font-size: 25px;
         line-height: 30px;
     }
 
@@ -127,8 +189,19 @@
 
         padding-top: 20px;
         font-weight: 400;
-        font-size: $font-size-text;
+        font-size: 20px;
         line-height: 130%;
+
+        @media (max-width: 999px) {
+            font-size: 18px;
+            line-height: normal;
+        }
+        @media (max-width: 768px) {
+            font-size: 16px;
+        }
+        @media (max-width: 480px) {
+            font-size: 15px;
+        }
     }
 
     &__arrow-right {
@@ -141,18 +214,26 @@
     &__right-part {
         width: 50%;
         padding: 88px 0 50px 0;
+        background-color: #F7F8F7;
+        @media (max-width: 999px) {
+            width: 100%;
+            padding: 0 0 50px 0;
+        }
     }
 
     &__slider-line {
 
-       margin-top: 85px;
+        margin-top: 85px;
         width: 100%;
         height: 1px;
-        background-color: $color-black-dark;
+        background-color: #0E110D;
 
         display: flex;
         flex-direction: row;
         align-items: center;
+        @media (max-width: 999px) {
+            margin-top: 35px;
+        }
     }
 
     &__slider-line-snake {
@@ -166,9 +247,22 @@
         display: flex;
         flex-direction: row;
         justify-content: flex-start;
+        width: 560px;
 
 
         overflow: hidden;
+        @media (max-width: 999px) {
+            margin: 0 auto;
+        }
+        @media (max-width: 635px) {
+            width: 500px;
+        }
+        @media (max-width: 505px) {
+            width: 400px;
+        }
+        @media (max-width: 405px) {
+            width: 300px;
+        }
     }
 
     &__snake-slide-bar {
@@ -178,49 +272,69 @@
 
         position: relative;
         right: 20px;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
     }
 
     &__slider-img {
-        padding-right: 10px;
+        // padding-right: 10px;
 
     }
 
     &__slider-img {
-
         padding-top: 108px;
+        @media (max-width: 999px) {
+            padding-top: 35px;
+        }
     }
 }
 
 .animation-img {
+    
     &__1 {
-        right: 1140px;
+        right: 200%;
         transition: 0.5s;
+        // @media (max-width: 999px) {
+        //     right: 120%;
+        //     transform: translateX(-50%);
+        // }
     }
 
     &__2 {
-       right: 570px;
-       transition: 0.5s; 
+        right: 100%;
+        transition: 0.5s;
+        // @media (max-width: 999px) {
+        //     right: 70%;
+        //     transform: translateX(-50%);
+        // }
     }
 
     &__3 {
-        right: 0px;
+        right: 0;
         transition: 0.5s;
+        // @media (max-width: 999px) {
+        //     right: 50%;
+        //     transform: translateX(-50%);
+        // }
     }
 }
 
 .animation-slider {
     &__1 {
-        left: 0px;
+        transform: translateX(0);
         transition: 0.5s;
     }
 
     &__2 {
-       left: 190px;
+        transform: translateX(100%);
        transition: 0.5s; 
     }
 
     &__3 {
-        left: 380px;
+        transform: translateX(200%);
         transition: 0.5s;
     }
 }
@@ -229,9 +343,9 @@
     color: white;
     border-radius: 5px;
     transition: all .8s ease;
-    background-color: $color-green-light;
+    background-color: #009C68;
     &:hover{
-        background-color: $color-green-dark;
+        background-color: #005C3D;
         cursor: pointer;
     }
 }
