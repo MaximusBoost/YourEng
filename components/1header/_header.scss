@@ -192,6 +192,7 @@
 
 .blur-fon {
     backdrop-filter: blur(3px);
+    z-index: 20;
 }
 
 .scroll-none {

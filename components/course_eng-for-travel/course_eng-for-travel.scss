@@ -83,8 +83,6 @@
 .structure-lesson {
 
     background-color: #F7F8F7;
-    max-height: 776px;
-
     &__container {
         max-width: 1140px;
         margin: 0 auto;
@@ -251,6 +249,9 @@
 
 
         overflow: hidden;
+        @media (max-width: 1127px) {
+            width: 500px;
+        }
         @media (max-width: 999px) {
             margin: 0 auto;
         }

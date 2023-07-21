@@ -44,7 +44,6 @@ class Header {
                     menu.classList.toggle('opacity-see');
                     localCross.classList.toggle('header__cross-click');
                     lineCross.classList.toggle('header__cross-line-click');
-                    console.log(menu);
                     filterFon.classList.toggle('blur-fon');
                     body.classList.toggle('scroll-none');
 

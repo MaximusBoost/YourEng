@@ -73,6 +73,14 @@
     &__text {
         padding-left: 40px;
         line-height: 140%;
+
+        @media (max-width: 384px) {
+            padding-left: 0;
+        }
+
+        @media (max-width: 352px) {
+            font-size: 12px;
+        }
     }
 
     &__data {
@@ -86,5 +94,9 @@
         width: 354px;
         height: 58px;
         margin: 50px auto 59px auto;
+
+        @media (max-width: 374px) {
+            width: 294px;
+        }
     }
 }

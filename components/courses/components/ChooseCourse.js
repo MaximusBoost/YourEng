@@ -12,7 +12,7 @@ class ChooseCourse {
     render(img1, img2, img3, img4, img5, img6) {
         
         let htmlContent = ` 
-                <div class="close-event__card card course-list__size-lesson">
+                <div class="close-event__card card course-list__size-lesson" data-filter="business">
                     <div class="card__title">Бизнес-английский</div>
                     <img src=${img1} alt="classroom" class="card__img">
                     <p class="card__description">Развиваем языковые навыки делового общения: составление резюме, ведение переписки, участие в переговорах</p>
@@ -21,7 +21,7 @@ class ChooseCourse {
                         <a href="#" class="card__link _link-white">Подробнее</a>
                     </div>
                 </div>
-                <div class="close-event__card card course-list__size-lesson">
+                <div class="close-event__card card course-list__size-lesson" data-filter="travel">
                     <div class="card__title">Английский для путешествий</div>
                     <img src=${img2} alt="classroom" class="card__img">
                     <p class="card__description">Ничего лишнего! В программе делается 
@@ -31,7 +31,7 @@ class ChooseCourse {
                         <a href="../course_eng-for-travel/course_eng-for-travel.html" class="card__link _link-white">Подробнее</a>
                     </div>
                 </div>
-                <div class="close-event__card card course-list__size-lesson">
+                <div class="close-event__card card course-list__size-lesson" data-filter="beginner">
                     <div class="card__title">От Beginner до Elementary</div>
                     <img src=${img3} alt="classroom" class="card__img">
                     <p class="card__description">Сделайте первый рывок в изучении
@@ -41,7 +41,7 @@ class ChooseCourse {
                         <a href="#" class="card__link _link-white">Подробнее</a>
                     </div>
                 </div>
-                <div class="close-event__card card course-list__size-lesson">
+                <div class="close-event__card card course-list__size-lesson" data-filter="IT">
                     <div class="card__title">IT-английский</div>
                     <img src=${img4} alt="classroom" class="card__img">
                     <p class="card__description">Техническую лексику из области программирования, тестирования, аналитики и других направлений IT </p>
@@ -50,7 +50,7 @@ class ChooseCourse {
                         <a href="#" class="card__link _link-white">Подробнее</a>
                     </div>
                 </div>
-                <div class="close-event__card card course-list__size-lesson">
+                <div class="close-event__card card course-list__size-lesson" data-filter="common">
                     <div class="card__title">Общий разговорный курс</div>
                     <img src=${img5} alt="classroom" class="card__img">
                     <p class="card__description">Развитие разговорных навыков 
@@ -61,7 +61,7 @@ class ChooseCourse {
                         <a href="#" class="card__link _link-white">Подробнее</a>
                     </div>
                 </div>
-                <div class="close-event__card card course-list__size-lesson">
+                <div class="close-event__card card course-list__size-lesson" data-filter="USE">
                     <div class="card__title">Английский для ЕГЭ</div>
                     <img src=${img6} alt="classroom" class="card__img">
                     <p class="card__description">Подготовка к ЕГЭ - не так страшно, 
@@ -87,10 +87,8 @@ class ChooseCourse {
             child.addEventListener('click', () => {
                 for(let child of children) {
                     child.classList.remove('_li-active')
-                    // button.setAttribute('data-active', 'false')
                 }
                 child.classList.add('_li-active')
-                // child.setAttribute('li-active', 'true')
                 this.data.reverse()
                 this.open(...this.data)
             })

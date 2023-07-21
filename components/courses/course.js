@@ -1,5 +1,6 @@
 'use strict'
 import ChooseCourse from "./components/ChooseCourse";
+import Header from "../1header/header";
 class DropDownList{
     addEventListennerFilter() {
         let clickElems = document.querySelectorAll('.course-list__item-solo-header');
@@ -30,11 +31,38 @@ class DropDownList{
             });
         };
     }
+    dinamicSearch() {
+        
+        let button = document.querySelector('.choose-course__btn')
+        let input = document.querySelector('.choose-course__input')
+        let data = []
+        
+        button.addEventListener('click', () => {
+            let cards = document.querySelectorAll('.course-list__size-lesson')
+            let cardTitles = document.querySelectorAll('.course-list__title')
+            let cardTexts = document.querySelectorAll("[data-description]")
+            for(let i = 0; i < cardTitles.length; i++) {
+                data.push([cardTitles[i].textContent, cardTexts[i].textContent, i])
+            }
+            let standardString = input.value
+            for(let card of cards) {
+                card.classList.remove('hide')
+            }
+            data.forEach( elemArr => {
+                const isVisible = elemArr[0].toLowerCase().includes(standardString) || elemArr[1].toLowerCase().includes(standardString)
+                if(!isVisible) {
+                    cards[elemArr[2]].classList.add('hide')
+                }
+            })
+        })
+    }
 };
 
 let callThisFunc = new DropDownList;
 callThisFunc.addEventListennerFilter();
 callThisFunc.addEventListenner();
-ChooseCourse.addListenerForChangePage()
+callThisFunc.dinamicSearch();
+ChooseCourse.addListenerForChangePage();
+Header.menuBurger();
 
 export default new DropDownList();
