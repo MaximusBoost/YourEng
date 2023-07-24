@@ -14,6 +14,6 @@ document.addEventListener('DOMContentLoaded', function() {
     TechnicalFunctions.addListenerForFreeLesson()
     TechnicalFunctions.addListenerDataClose()
     Header.menuBurger();
+    Header.smoothNavigation()
     MySwiper.addInitialization()
-    
 })

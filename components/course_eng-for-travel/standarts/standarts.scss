@@ -1,7 +1,6 @@
 .standarts {
-
-    // max-height: 660px;
     background-color: $color-white;
+    line-height: normal;
 
     &__container {
         max-width: 1140px;
@@ -30,7 +29,6 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        // padding-bottom: 15px;
 
         border-width: 2px 0px;
         border-style: solid;
@@ -52,9 +50,6 @@
 
     &__item-description {
         padding-top: 40px;
-        // display: flex;
-        // flex-direction: column;
-        // justify-content: space-between;
         padding-left: 20px;
 
         font-weight: $font-weight-text;
@@ -155,7 +150,9 @@
 }
 
 @media (max-width: 856px) {
+    
     .standarts {
+        
 
 		&__container-items {
             flex-direction: column;
@@ -172,6 +169,7 @@
 		&__item-description {
             font-size: 20px;
             padding-top: 22px;
+            line-height: normal;
 		}
 
 		&__price-btn {

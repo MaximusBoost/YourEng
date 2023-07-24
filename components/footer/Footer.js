@@ -2,9 +2,9 @@ import TechnicalFunctions from "../../technicalFunctions/TechnicalFunctions";
 
 class Footer {
     sendForm() {
-            let form = document.getElementById('footer__form');
-
-            form.addEventListener('submit', formSend);
+            let forms = document.querySelectorAll('._footer__form');
+            forms.forEach( form => {
+                form.addEventListener('submit', formSend);
 
             async function formSend(event){
                 event.preventDefault();
@@ -31,11 +31,10 @@ class Footer {
                     },1000)
                 } else {
                     alert('Заполните обязательные поля')
-                }
-            }
-
-            
-    }
+                };
+            };
+        });
+    };
 };
 
 export default new Footer();

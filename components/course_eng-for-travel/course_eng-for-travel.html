@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./course-index.scss">
-    
+    <script src="./course_eng-for-travel.js" defer></script>
     <title>YourEng</title>
 </head>
 <body>
@@ -19,9 +19,9 @@
 
             <div class="header__menu-burger">
                 <div class="header__menu-box">
-                    <a href="#" class="header__menu-burger-link">Курсы</a>
-                    <a href="#" class="header__menu-burger-link">Преподаватели</a>
-                    <a href="#" class="header__menu-burger-link">Мероприятия</a>
+                    <a href="../../components/courses/course.html" class="header__menu-burger-link">Курсы</a>
+                    <a href="../../index.html#teachers" class="header__menu-burger-link">Преподаватели</a>
+                    <a href="../../index.html#close-event" class="header__menu-burger-link">Мероприятия</a>
                     <a href="#" class="header__menu-burger-link">Личный код</a>
                 </div>
             </div>
@@ -32,7 +32,7 @@
                 <a href="../../index.html" class="footer__logo-link"><span>Your</span><span class="header__span-green">Eng</span></a>
             </div>
             <div class="header__medium-text">
-                <a href="#">Курсы</a><a href="#">Преподаватели</a><a href="#">Мероприятия</a>
+                <a href="../../components/courses/course.html">Курсы</a><a href="../../index.html#teachers">Преподаватели</a><a href="../../index.html#close-event">Мероприятия</a>
             </div>
             <div class="header__personal-cabinet"><a href="#">Личный кабинет</a></div>
         </div>
@@ -54,7 +54,7 @@
                         <div class="full-screen_read-area">
                             <p class="full-screen__text-big">Английский<br>для путешествий</p>
                             <p class="full-screen__text-small">Запишитесь на бесплатное пробное<br>занятие и познакомьтесь c YourEng</p>
-                            <a href="#" class="_link-green full-screen__link-size" id="full-screen-record"><span>Записаться</span></a>
+                            <a href="#" class="_link-green full-screen__link-size _full-screen-record"><span>Записаться</span></a>
                         </div>
 
                     </div>
@@ -400,7 +400,7 @@
                         <div class="standarts__btn-wrapper">
                             <div class="standarts__price-btn">
                                 <p>от <span>600</span> руб. <br> за занятие</p>
-                                <button class="standarts__btn">Оставить заявку</button>
+                                <button class="standarts__btn _full-screen-record">Оставить заявку</button>
                             </div>
                         </div>
 
@@ -421,7 +421,7 @@
                         <div class="standarts__btn-wrapper">
                             <div class="standarts__price-btn">
                                 <p>от <span>1000</span> руб. <br> за занятие</p>
-                                <button class="standarts__btn">Оставить заявку</button>
+                                <button class="standarts__btn _full-screen-record">Оставить заявку</button>
                             </div>
                         </div>
 
@@ -441,7 +441,7 @@
                         <div class="standarts__btn-wrapper">
                             <div class="standarts__price-btn">
                                 <p>от <span>1500</span> руб. <br> за занятие</p>
-                                <button class="standarts__btn">Оставить заявку</button>
+                                <button class="standarts__btn _full-screen-record">Оставить заявку</button>
                             </div>
                         </div>
 
@@ -453,29 +453,40 @@
 
         </div>
 
-        <footer class="footer" >
+        <footer class="footer">
             <div class="footer__container _container">
                 <div class="footer__logo header__logo" >
-                    <span>Your</span><span class="header__span-green">Eng</span>
+                    <a href="../../index.html" class="footer__logo-link"><span>Your</span><span class="header__span-green">Eng</span></a> 
                 </div>
                 <div class="footer__list">
+                    <div class="footer__logo header__logo footer__logo_adaptive" >
+                        <a href="#" class="footer__logo-link"><span>Your</span><span class="header__span-green">Eng</span></a> 
+                    </div>
                     <ul>
-                        <li><a href="#">Курсы</a></li>
-                        <li><a href="">Преподаватели</a></li>
-                        <li><a href="">Мероприятия</a></li>
+                        <li><a href="../../components/courses/course.html">Курсы</a></li>
+                        <li><a href="../../index.html#teachers">Преподаватели</a></li>
+                        <li><a href="../../index.html#close-event">Мероприятия</a></li>
                         <li><a href="">Личный кабинет</a></li>
                     </ul>
                 </div>
                 <div class="footer__give-mail">
-                    <input type="text" class="footer__input" placeholder="example@mail.ru">
-                    <button class="footer__button _button-green">Подписаться</button>
+                    <form action="#" class="_footer__form">
+                        <input type="text" class="footer__input _footer__req _footer__email" placeholder="example@mail.ru" data-input="true">
+                        <button class="footer__button _button-green">Подписаться</button>
+                    </form>
                     <p class="footer__text">Подпишитесь на рассылку, чтобы каждую неделю получать полезные материалы, приглашения на
-                        бесплатные лекции и первым узнавать о специальных предложениях</p>
+                        бесплатные лекции и первым узнавать о специальных предложениях
+                    </p>
+                    <div class="footer__icons footer__icons_adaptive">
+                        <a href="#"><img src="../../components/form/img/Instagram.svg" alt="instagram" ></a>
+                        <a href="#"><img src="../../components/form/img/telegram.svg" alt="telegram" ></a> 
+                        <a href="#"><img src="../../components/form/img/Vk.svg" alt="vk"></a>
+                    </div>
                 </div>
                 <div class="footer__icons">
-                    <img src="./footer/img/Instagram.svg" alt="instagram" >
-                    <img src="./footer/img/telegram.svg" alt="telegram" >
-                    <img src="./footer/img/Vk.svg" alt="vk">
+                    <a href="#"><img src="../../components/form/img/Instagram.svg" alt="instagram" ></a>
+                    <a href="#"><img src="../../components/form/img/telegram.svg" alt="telegram" ></a> 
+                    <a href="#"><img src="../../components/form/img/Vk.svg" alt="vk"></a>
                 </div>
             </div>
         </footer>
@@ -483,9 +494,6 @@
     </div>
 
     <div id="ROOT_MODAL"></div>
-
-    <script src="./course_eng-for-travel.js"></script>
-    
 </body>
 </html>
 

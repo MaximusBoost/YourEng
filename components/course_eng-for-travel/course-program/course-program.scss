@@ -70,15 +70,14 @@
     &__img-check {
         width: 30px;
         height: 15px;
-        transition: 1s;
+        transition: all .5s linear;
     }
 
     &__big-number {
-        // padding-bottom: 32px;
         overflow: hidden;
         max-height: 0px;
 
-        transition: 1s;
+        transition: all .5s linear;
        
     }
 }
@@ -110,11 +109,10 @@
 .animation-for-drop-down {
     max-height: 700px;
     padding-bottom: 32px;
-    transition: 1s;
-    transition-timing-function: linear;
+    transition: all .5s linear;
 }
 
 .chekmark-rotate {
     transform: rotate(180deg);
-    transition: 1s;
+    transition: all .5s linear;
 }

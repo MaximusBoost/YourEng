@@ -55,24 +55,27 @@ class TechnicalFunctions {
     };
 
     addListenerForFreeLesson() {
-        let record = document.getElementById('full-screen-record');
-        record.addEventListener('click', function() { // запись на бесплатное занятие через главную страницу
-            FreeLesson.open(); // открытие модального окна
-            FreeLesson.sendForm();
-            document.addEventListener('keydown', function(event) {
-                if(event.code.toLowerCase() == 'escape') {
-                    FreeLesson.close();
-                };
+        
+        let records = document.querySelectorAll('._full-screen-record');
+        records.forEach( record => {
+            record.addEventListener('click', function() { // запись на бесплатное занятие через главную страницу
+                FreeLesson.open(); // открытие модального окна
+                console.log('nice')
+                FreeLesson.sendForm();
+                document.addEventListener('keydown', function(event) {
+                    if(event.code.toLowerCase() == 'escape') {
+                        FreeLesson.close();
+                    };
+                });
+                let inputTel = document.querySelector('.modal__input_phone');
+    
+                inputTel.addEventListener('keyup', function(event) {
+                    if(event.key != 'Backspace' && (inputTel.value.length === 1 || inputTel.value.length === 5 || inputTel.value.length === 9 || inputTel.value.length === 12)) {
+                        inputTel.value += '-'
+                    };
+                });
             });
-            let inputTel = document.querySelector('.modal__input_phone');
-
-            inputTel.addEventListener('keyup', function(event) {
-                if(event.key != 'Backspace' && (inputTel.value.length === 1 || inputTel.value.length === 5 || inputTel.value.length === 9 || inputTel.value.length === 12)) {
-                    inputTel.value += '-'
-                }
-            })
         });
-
     };
 };
 

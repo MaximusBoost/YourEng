@@ -174,6 +174,7 @@
         width: 14px;
         height: 7px;
         transition: all .3s ease;
+        margin-left: 5px;
     }
 }
 
@@ -277,9 +278,6 @@
             display: block;
             width: 100%;
         }
-
-        
-
     }
 
     &__img {
@@ -428,10 +426,6 @@
 
 .card { //колхоз
     animation: visible .5s linear forwards;
-    
-    &:nth-last-child(-n + 3) {
-        border-bottom: none;
-    }
 }
 
 ._button-green{ // тоже чистый колхоз
@@ -442,10 +436,6 @@
 
 .full-screen-wrapper { // мисье колхозье
     background-color: #fff;
-}
-
-.footer{
-    // height: 345px;
 }
 
 .drop-list {
@@ -473,13 +463,6 @@
         padding-left: 15px;
     }
 
-    & span:nth-child(1) {
-        border-bottom: none;
-    }
-
-    & span:nth-child(3) {
-        border-top: none;
-    }
 }
 
 //animation
@@ -509,7 +492,7 @@
     border: 1px solid #fff;
 
     transition: all .3s ease;
-    &__elem-container {
+    div {
         height: 38px;
 
         display: flex;
@@ -522,10 +505,7 @@
         line-height: 18px;
         color: #878787;
 
-        &:nth-child(2) {
-            border-top: 1px solid #878787;
-            border-bottom: 1px solid #878787;
-        }
+        border-bottom: 1px solid #878787;
     }
 }
 

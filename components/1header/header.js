@@ -53,6 +53,27 @@ class Header {
 
         clickElement();
     }
+
+    smoothNavigation() {
+        let menuLinks = document.querySelectorAll('._smooth-link[data-goto]');
+        if(menuLinks.length != 0) {
+            for(let menuLink of menuLinks) {
+                menuLink.addEventListener('click', (event) => {
+                    let target = event.target;
+                    if(target.dataset.goto) {
+                        const gotoBlock = document.querySelector(target.dataset.goto)
+                        const gotoBlockValue = gotoBlock.getBoundingClientRect().top + pageYOffset;
+
+                        window.scrollTo({
+                            top: gotoBlockValue,
+                            behavior: 'smooth'
+                        })
+                        event.preventDefault();
+                    }
+                })              
+            }
+        }
+    };
 }
 
 export default new Header();
