@@ -12,7 +12,9 @@ class ChooseCourse {
     render(img1, img2, img3, img4, img5, img6) {
         
         let htmlContent = ` 
-                <div class="close-event__card card course-list__size-lesson" data-filter-data="12" data-filter-duration="90" data-filter-popular="8">
+                <div class="close-event__card card course-list__size-lesson" 
+                data-sort-data="12" data-sort-duration="90" data-sort-popular="8" data-filter-purpose="1" 
+                data-filter-price="1,2" data-filter-duration="0">
                     <div class="card__title">Бизнес-английский</div>
                     <img src=${img1} alt="classroom" class="card__img">
                     <p class="card__description">Развиваем языковые навыки делового общения: составление резюме, ведение переписки, участие в переговорах</p>
@@ -21,7 +23,9 @@ class ChooseCourse {
                         <a href="../course_eng-for-travel/course_eng-for-travel.html" class="card__link _link-white">Подробнее</a>
                     </div>
                 </div>
-                <div class="close-event__card card course-list__size-lesson" data-filter-data="9" data-filter-duration="120" data-filter-popular="5">
+                <div class="close-event__card card course-list__size-lesson" 
+                data-sort-data="9" data-sort-duration="120" data-sort-popular="5"  data-filter-purpose="0,1"
+                 data-filter-price="1,2" data-filter-duration="0">
                     <div class="card__title">Английский для путешествий</div>
                     <img src=${img2} alt="classroom" class="card__img">
                     <p class="card__description">Ничего лишнего! В программе делается 
@@ -31,7 +35,9 @@ class ChooseCourse {
                         <a href="../course_eng-for-travel/course_eng-for-travel.html" class="card__link _link-white">Подробнее</a>
                     </div>
                 </div>
-                <div class="close-event__card card course-list__size-lesson" data-filter-data="9" data-filter-duration="70" data-filter-popular="10">
+                <div class="close-event__card card course-list__size-lesson"
+                 data-sort-data="9" data-sort-duration="70" data-sort-popular="10"  data-filter-purpose="0"
+                  data-filter-price="0,1,2" data-filter-duration="0">
                     <div class="card__title">От Beginner до Elementary</div>
                     <img src=${img3} alt="classroom" class="card__img">
                     <p class="card__description">Сделайте первый рывок в изучении
@@ -41,7 +47,9 @@ class ChooseCourse {
                         <a href="../course_eng-for-travel/course_eng-for-travel.html" class="card__link _link-white">Подробнее</a>
                     </div>
                 </div>
-                <div class="close-event__card card course-list__size-lesson" data-filter-data="8" data-filter-duration="50" data-filter-popular="9">
+                <div class="close-event__card card course-list__size-lesson"
+                 data-sort-data="8" data-sort-duration="50" data-sort-popular="9" data-filter-price="2"
+                  data-filter-duration="1">
                     <div class="card__title">IT-английский</div>
                     <img src=${img4} alt="classroom" class="card__img">
                     <p class="card__description">Техническую лексику из области программирования, тестирования, аналитики и других направлений IT </p>
@@ -50,7 +58,9 @@ class ChooseCourse {
                         <a href="../course_eng-for-travel/course_eng-for-travel.html" class="card__link _link-white">Подробнее</a>
                     </div>
                 </div>
-                <div class="close-event__card card course-list__size-lesson" data-filter-data="11" data-filter-duration="150" data-filter-popular="5">
+                <div class="close-event__card card course-list__size-lesson"
+                 data-sort-data="11" data-sort-duration="150" data-sort-popular="5"  data-filter-purpose="0,1" data-filter-price="1,2"
+                  data-filter-duration="2">
                     <div class="card__title">Общий разговорный курс</div>
                     <img src=${img5} alt="classroom" class="card__img">
                     <p class="card__description">Развитие разговорных навыков 
@@ -61,7 +71,9 @@ class ChooseCourse {
                         <a href="../course_eng-for-travel/course_eng-for-travel.html" class="card__link _link-white">Подробнее</a>
                     </div>
                 </div>
-                <div class="close-event__card card course-list__size-lesson" data-filter-data="10" data-filter-duration="60" data-filter-popular="6">
+                <div class="close-event__card card course-list__size-lesson"
+                 data-sort-data="10" data-sort-duration="60" data-sort-popular="6"  data-filter-purpose="2" 
+                 data-filter-price="0,1,2" data-filter-duration="1">
                     <div class="card__title">Английский для ЕГЭ</div>
                     <img src=${img6} alt="classroom" class="card__img">
                     <p class="card__description">Подготовка к ЕГЭ - не так страшно, 

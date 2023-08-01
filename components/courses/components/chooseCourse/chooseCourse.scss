@@ -179,7 +179,7 @@
 }
 
 .course-list {
-    // height: 1393px;
+    min-height: 750px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -313,6 +313,7 @@
         font-size: 14px;
         line-height: 17px;
         margin-top: 30px;
+        background-color: transparent;
 
         text-decoration-line: underline;
         cursor: pointer;
@@ -534,4 +535,15 @@
 
 .hide{
     display: none;
+}
+
+
+.tempDiv{
+    color: #000;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
 }
