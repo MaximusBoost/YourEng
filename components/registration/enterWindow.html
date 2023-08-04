@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enter</title>
+    <link rel="stylesheet" href="./registration.scss">
+    <link rel="icon" href="../../img/tv.svg">
+    <script src="./enterWindow.js" defer></script>
+</head>
+<body>
+    <div class="registration">
+        <div class="modal " id="modal-container" data-close="true">
+            <div class="modal__body _container container-send" >
+                <div class="modal__container registration__content">
+                    <h3 class="modal__title registration__title">Вход</h3>
+                    <form action="#" class="modal__form registration__form form-send">
+                        <div class="modal__input-container registration__input">
+                            <input class="modal__input modal__input_name _form__req" placeholder="Логин" data-input="true">
+                        </div>
+                        <div class="modal__input-container registration__input">
+                            <input class="modal__input modal__input_password _modal-req _form__req" placeholder="Пароль" data-input="true">
+                        </div>
+                        <label class="registration__checkbox">
+                            <input type="checkbox">
+                            <span class="registration__checker"></span>
+                            Сохранить логин
+                        </label>
+                        <div class="registration__tips">
+                            <a href="#" class="registration__login">Забыли логин?</a>
+                            <a href="#" class="registration__password">Забыли пароль?</a>
+                        </div>
+                        <button class="modal__button _button-green registration__button">Войти</button>
+                        <a href="./registrationWindow.html" class="modal__button _link-green registration__button">Зарегистрироваться</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

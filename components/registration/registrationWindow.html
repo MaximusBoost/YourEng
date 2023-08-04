@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="stylesheet" href="./registration.scss">
+    <link rel="icon" href="../../img/tv.svg">
+    <script src="./enterWindow.js" defer></script>
+</head>
+<body>
+    <div class="registration">
+        <div class="modal" id="modal-container" data-close="true">
+            <div class="modal__body _container container-send" >
+                <div class="modal__container registration__content">
+                    <h3 class="modal__title registration__title">Регистрация</h3>
+                    <form action="#" class="modal__form form-send">
+                        <div class="modal__input-container">
+                            <input class="modal__input modal__input_name _form__req _register" placeholder="Логин" data-input="true">
+                        </div>
+                        <div class="modal__input-container">
+                            <input class="modal__input modal__input_password _form__req" placeholder="Пароль" data-input="true">
+                        </div>
+                        <div class="modal__input-container">
+                            <input class="modal__input modal__input_phone _form__req"  placeholder="+7 (___)-___-__-__" type="tel" data-input="true" maxlength="15">
+                        </div>
+                        
+                        <div class="modal__input-container">
+                            <input class="modal__input modal__input_email _modal-req _modal-email _form__req" placeholder="example@mail.ru" type="email" data-input="true">
+                        </div>
+                        <button class="modal__button _button-green">Зарегистрироваться</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

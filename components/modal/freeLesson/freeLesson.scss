@@ -137,7 +137,34 @@
             }
         }
 
+        &_password {
+            &._error{
+                box-shadow: 0 0 15px red;
+                border: none;
+            }
+    
+            &._error::-webkit-input-placeholder {
+                color: red;
+            }
+    
+            &._error::-moz-placeholder {
+                color: red;
+            }
+        }
+
         &_phone {
+            &._error{
+                box-shadow: 0 0 15px red;
+                border: none;
+            }
+    
+            &._error::-webkit-input-placeholder {
+                color: red;
+            }
+    
+            &._error::-moz-placeholder {
+                color: red;
+            }
         }
 
         &_email {
