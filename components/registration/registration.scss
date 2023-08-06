@@ -17,6 +17,9 @@
     &__form{
         flex-direction: column;
         width: 450px;
+        @media (max-width: 460px) {
+            width: 100%;
+        }
     }
     label input{
         display: none;
@@ -87,28 +90,9 @@
         }
     }
 
-    // &__checker{
-    //     height: 16px;
-    //     width: 16px;
-    //     // border: 1px solid gray;
-    //     display: inline-block;
-    //     // position: relative;
-    //     background-color:#FFF;
-    //     border-radius:2px;
-    //     top: 2px;
-    //     padding: 2px;
-    // }
-
-    // &____inner-square{
-    //     position: absolute;
-    //     width: 12px;
-    //     height: 12px;
-    //     top: 50%;
-    //     left: 50%;
-    //     transform: translate(-50%, -50%);
-    //     z-index: 1;
-    //     border-radius:2px;
-    //     background-color:green;
-        
-    // }
+    &__reg-btn{
+        @media (max-width: 450px) {
+            width: 100%;
+        }
+    }
 }

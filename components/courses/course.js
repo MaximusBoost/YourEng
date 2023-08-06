@@ -42,7 +42,6 @@ class DropDownList{
         let button = document.querySelector('.choose-course__btn')
         let input = document.querySelector('.choose-course__input')
         
-        
         button.addEventListener('click', () => {
             
             let cards = document.querySelectorAll('.course-list__size-lesson')
@@ -112,7 +111,6 @@ class DropDownList{
 
     // основные функции сортировки
     
-
     sortByPrice(target) {
         
         let prices = document.querySelectorAll('.course-list__price-lesson')
@@ -160,10 +158,6 @@ class DropDownList{
         this.emptyContent()
     };
     
-    
-
-    
-
     // фильтры
     // вспомогательные функции фильтров
     contains(arr, attribute) {
@@ -461,7 +455,6 @@ class DropDownList{
         })
     }
 };
-
 
 let callThisFunc = new DropDownList;
 callThisFunc.addEventListennersort();

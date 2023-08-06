@@ -8,4 +8,5 @@ DropDownSlowly.addListenner();
 SlickSlider.addEventListenner();
 TechnicalFunctions.addListenerForFreeLesson()
 TechnicalFunctions.addListenerDataClose()
+TechnicalFunctions.addListenerForDataInput()
 Footer.sendForm();

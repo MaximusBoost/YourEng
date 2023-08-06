@@ -1,13 +1,16 @@
 import TechnicalFunctions from "../../technicalFunctions/TechnicalFunctions";
+import IMask from 'imask'
 
 class FormEnter{
     constructor() {
-        this.checker = document.querySelector('.registration__checker')
+        this.checker = document.querySelector('.registration__checker');
+        this.mask = '';
     }
     sendForm() {
         const form = document.querySelector('.form-send');
         const container = document.querySelector('.container-send')
         form.addEventListener('submit', async (event) => {
+            console.log(this.mask)
             event.preventDefault();
 
             let error = formValidate();
@@ -28,10 +31,11 @@ class FormEnter{
                         formReq.forEach((input) => {
                             if(input.classList.contains('modal__input_name')) {
                                 input.placeholder = 'Логин'
-                                if(this.checker.getAttribute('checked')) {
-                                    localStorage.setItem('login', input.value)
-                                    // localStorage.setItem('checker', 'true')
-                                }   
+                                if(this.checker) {
+                                    if(this.checker.getAttribute('checked')) {
+                                        localStorage.setItem('login', input.value)
+                                    } 
+                                }
                             } else if(input.classList.contains('modal__input_password')) {
                                 input.placeholder = 'Пароль'
                             } else if(input.classList.contains('modal__input_phone')) {
@@ -48,9 +52,10 @@ class FormEnter{
                         formReq.forEach((input) => {
                             if(input.classList.contains('modal__input_name')) {
                                 input.placeholder = 'Логин'
-                                if(this.checker.getAttribute('checked')) {
-                                    localStorage.setItem('login', input.value)
-                                    // localStorage.setItem('checker', 'true')
+                                if(this.checker) {
+                                    if(this.checker.getAttribute('checked')) {
+                                        localStorage.setItem('login', input.value)
+                                    } 
                                 }
                             } else if(input.classList.contains('modal__input_password')) {
                                 input.placeholder = 'Пароль'
@@ -74,7 +79,7 @@ class FormEnter{
 
         
 
-        function formValidate() {
+        let formValidate = () => {
             let error = 0;
             let formReq = document.querySelectorAll('._form__req');
             for(let i = 0; i< formReq.length; i++) {
@@ -95,6 +100,12 @@ class FormEnter{
                     error++;
                     input.value = ''
                     input.placeholder = 'Пароль должен содержать более 8 символов'
+                }
+                else if(input.classList.contains('modal__input_phone') && !this.mask.masked.isComplete) {
+                    formAddError(input);
+                    error++;
+                    input.value = ''
+                    input.placeholder = 'Введите номер телефона'
                 }
             };
             return error;
@@ -136,9 +147,19 @@ class FormEnter{
             this.checker.checked = 'true'
         }
     }
+
+    maskForPhone() {
+        const phoneInput = document.querySelector('.modal__input_phone')
+        if(phoneInput) {
+           this.mask = new IMask(phoneInput, {
+                mask: "+{7}(000) 000-00-00"
+            });
+        };
+    };
 };
 
 let callThisFunc = new FormEnter;
+callThisFunc.maskForPhone()
 callThisFunc.sendForm()
 callThisFunc.chekerListener()
 callThisFunc.autoFillLogin()

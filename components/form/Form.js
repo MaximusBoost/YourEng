@@ -1,5 +1,6 @@
 import TechnicalFunctions from "../../technicalFunctions/TechnicalFunctions";
 
+
 class Form{
     sendForm() {
         const form = document.getElementById('form');
@@ -71,6 +72,8 @@ class Form{
 
         TechnicalFunctions.addListenerForDataInput();
     };
+
+    
 };
 
 export default new Form()

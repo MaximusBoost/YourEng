@@ -1,34 +1,34 @@
 import FreeLesson from "../components/modal/freeLesson/FreeLesson";
 class TechnicalFunctions {
 
-    formValidate(className,emailName) {
-        let error = 0;
-        let formReq = document.querySelectorAll(`.${className}`);
-        for(let i = 0; i< formReq.length; i++) {
-            let input = formReq[i];
-            this.formRemoveError(input);
+    // formValidate(className,emailName) {
+    //     let error = 0;
+    //     let formReq = document.querySelectorAll(`.${className}`);
+    //     for(let i = 0; i< formReq.length; i++) {
+    //         let input = formReq[i];
+    //         this.formRemoveError(input);
 
-            if(input.classList.contains(emailName)) {
-                 if(!this.emailTest(input)){
-                    this.formAddError(input);
-                    error++;
-                 };
-            } else {
-                if(input.value == '') {
-                    this.formAddError(input);
-                    error++;
-                };
-            };
-        };
-        return error;
-    };
+    //         if(input.classList.contains(emailName)) {
+    //              if(!this.emailTest(input)){
+    //                 this.formAddError(input);
+    //                 error++;
+    //              };
+    //         } else {
+    //             if(input.value == '') {
+    //                 this.formAddError(input);
+    //                 error++;
+    //             };
+    //         };
+    //     };
+    //     return error;
+    // };
 
-    formAddError(input) {
-        input.classList.add('_error');
-        if(input.placeholder == 'example@mail.ru' || input.placeholder == 'Введите почтовый адрес') {
-            input.placeholder = 'Введите почтовый адрес';
-        } 
-    }
+    // formAddError(input) {
+    //     input.classList.add('_error');
+    //     if(input.placeholder == 'example@mail.ru' || input.placeholder == 'Введите почтовый адрес') {
+    //         input.placeholder = 'Введите почтовый адрес';
+    //     } 
+    // }
     
     formRemoveError(input) {
         input.classList.remove('_error');
@@ -60,18 +60,10 @@ class TechnicalFunctions {
         records.forEach( record => {
             record.addEventListener('click', function() { // запись на бесплатное занятие через главную страницу
                 FreeLesson.open(); // открытие модального окна
-                console.log('nice')
                 FreeLesson.sendForm();
                 document.addEventListener('keydown', function(event) {
-                    if(event.code.toLowerCase() == 'escape') {
+                    if(event.code == 'Escape') {
                         FreeLesson.close();
-                    };
-                });
-                let inputTel = document.querySelector('.modal__input_phone');
-    
-                inputTel.addEventListener('keyup', function(event) {
-                    if(event.key != 'Backspace' && (inputTel.value.length === 1 || inputTel.value.length === 5 || inputTel.value.length === 9 || inputTel.value.length === 12)) {
-                        inputTel.value += '-'
                     };
                 });
             });

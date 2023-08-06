@@ -1,7 +1,11 @@
 import star from '../freeLesson/img/Vector.svg';
 import close from '../freeLesson/img/Cancel.svg';
 import TechnicalFunctions from '../../../technicalFunctions/TechnicalFunctions';
+import IMask from 'imask'
 class FreeLesson{
+    constructor() {
+        this.mask = '';
+    }
     render() {
         let htmlContent = ` 
             <div class="modal" id="modal-container" data-close="true">
@@ -19,7 +23,8 @@ class FreeLesson{
                                 <img src="${star}" alt="star">
                             </div>
                             <div class="modal__input-container">
-                                <input class="modal__input modal__input_phone" placeholder="+7 (___)-___-__-__" type="tel" data-input="true" maxlength="15">
+                                <input class="modal__input modal__input_phone _modal-req" placeholder="+7 (___)-___-__-__" type="tel" data-input="true">
+                                <img src="${star}" alt="star">
                             </div>
                             
                             <div class="modal__input-container">
@@ -73,88 +78,103 @@ class FreeLesson{
 
     sendForm() {
         
-            let form = document.getElementById('form-free-lesson');
-            let container = document.getElementById('modal-container')
+        let form = document.getElementById('form-free-lesson');
+        let container = document.getElementById('modal-container');
+        this.maskForPhone()
 
-            form.addEventListener('submit', formSend);
+        form.addEventListener('submit', (event) => {
+            event.preventDefault();
 
-            function formSend (event){  // async
-                event.preventDefault();
+            let error = formValidate(form)
 
-                let error = formValidate(form)
+            let formData = new FormData(form);
 
-                let formData = new FormData(form);
+            if(error == 0) {
+                container.classList.add('_sending');
+                form.reset();
 
-                if(error == 0) {
-                    container.classList.add('_sending');
-                    form.reset();
-   
-                    setTimeout(() => {
-                        let response = fetch('sendmail.php', { // await
-                            method: 'POST',
-                            body: formData
-                        });
-                        if(response.ok) {
-                            let result = response.json(); // await
-                            alert(result.message);
-                            form.reset();
-                            container.classList.remove('_sending')
-                        } else {
-                            alert('Ошибка отправки данных на сервер')
-                            container.classList.remove('_sending');
-                            
-                            let modal = document.querySelector('.modal');  // дублирование кода
-                            let modalWindow = document.querySelector('.modal__body');
-                            if(modal) {
-                                modalWindow.classList.remove('open');
-                                modalWindow.parentElement.classList.remove('open');
-                                modalWindow.classList.add('disappearance');
-                                modalWindow.parentElement.classList.add('disappearance');
-                                setTimeout(() => {
-                                    modalWindow.classList.remove('disappearance');
-                                    modalWindow.parentElement.classList.remove('disappearance');
-                                    ROOT_MODAL.innerHTML = ''
-                                },300);
-                            }; // дублирование кода
-
-                        }
-                    },1000)
-                } else {
-                    alert('Заполните обязательные поля')
-                }
-            }
-
-            function formValidate() {
-                let error = 0;
-                let formReq = document.querySelectorAll('._modal-req')
-                for(let i = 0; i< formReq.length; i++) {
-                    let input = formReq[i];
-                    TechnicalFunctions.formRemoveError(input);
-
-                    if(input.classList.contains('_modal-email')) {
-                         if(!TechnicalFunctions.emailTest(input)){
-                            formAddError(input);
-                            error++
-                         }
+                setTimeout(() => {
+                    let response = fetch('sendmail.php', { // await
+                        method: 'POST',
+                        body: formData
+                    });
+                    if(response.ok) {
+                        let result = response.json(); // await
+                        alert(result.message);
+                        form.reset();
+                        container.classList.remove('_sending')
                     } else {
-                        if(input.value == '') {
-                            formAddError(input);
-                            error++;
-                        }
+                        alert('Ошибка отправки данных на сервер')
+                        container.classList.remove('_sending');
+                        
+                        let modal = document.querySelector('.modal');  // дублирование кода
+                        let modalWindow = document.querySelector('.modal__body');
+                        if(modal) {
+                            modalWindow.classList.remove('open');
+                            modalWindow.parentElement.classList.remove('open');
+                            modalWindow.classList.add('disappearance');
+                            modalWindow.parentElement.classList.add('disappearance');
+                            setTimeout(() => {
+                                modalWindow.classList.remove('disappearance');
+                                modalWindow.parentElement.classList.remove('disappearance');
+                                ROOT_MODAL.innerHTML = ''
+                            },300);
+                        }; // дублирование кода
+
                     }
-                }
-                return error;
+                },1000)
+            } else {
+                alert('Заполните обязательные поля')
             }
-            function formAddError(input) {
-                input.classList.add('_error')
-                if(input.placeholder == 'Имя') {
-                    input.placeholder = 'Введите имя';
-                } else if(input.placeholder == 'example@mail.ru' || input.placeholder == 'Введите почтовый адрес') {
-                    input.placeholder = 'Введите почтовый адрес'
-                } else{
-                    input.placeholder = 'Введите дату рождения'
+        });
+
+        let formValidate = () =>{
+            let error = 0;
+            let formReq = document.querySelectorAll('._modal-req')
+            for(let i = 0; i< formReq.length; i++) {
+                let input = formReq[i];
+                TechnicalFunctions.formRemoveError(input);
+
+                if(input.classList.contains('_modal-email')) {
+                    if(!TechnicalFunctions.emailTest(input)){
+                        formAddError(input);
+                        error++
+                    }
+                } else
+                if(input.value == '') {
+                    formAddError(input);
+                    error++;
+                } else
+                if(input.classList.contains('modal__input_phone') && !this.mask.masked.isComplete) {
+                    formAddError(input);
+                    error++;
+                    input.value = ''
+                    input.placeholder = 'Введите номер телефона'
                 }
             }
+            return error;
+        }
+        function formAddError(input) {
+            input.classList.add('_error')
+            if(input.placeholder == 'Имя') {
+                input.placeholder = 'Введите имя';
+            } else if(input.placeholder == 'example@mail.ru' || input.placeholder == 'Введите почтовый адрес') {
+                input.placeholder = 'Введите почтовый адрес'
+            } else if(input.placeholder == '+7 (___)-___-__-__') {
+                input.placeholder = 'Введите номер телефона'}
+            else{
+                input.placeholder = 'Введите дату рождения'
+            }
+        }
     }
+
+    maskForPhone() {
+        const phoneInput = document.querySelector('.modal__input_phone')
+        if(phoneInput) {
+           this.mask = new IMask(phoneInput, {
+                mask: "+{7}(000) 000-00-00"
+            });
+        };
+    };
 }
 export default new FreeLesson()
