@@ -53,14 +53,22 @@ class FreeLesson{
     }
     
     open() {
-        this.render();
-        document.querySelector('.modal__body').classList.add('open'); // анимации появления окна
-        document.querySelector('.modal').classList.add('open');
+        // this.render();
+        const modal = document.querySelector('.modal')
+        const modalBody = document.querySelector('.modal__body')
+        modal.classList.remove('hidden') // анимации появления окна
+        modal.classList.add('open'); 
+        modalBody.classList.remove('hidden')
+        modalBody.classList.add('open');
     }
 
     close() {   
         let modal = document.querySelector('.modal');
-    
+        let form = document.getElementById('form-free-lesson');
+        form.reset();
+        modal.querySelectorAll('input').forEach((input)=> {
+            input.classList.remove('_error')
+        })
         let modalWindow = document.querySelector('.modal__body');
         if(modal) {
             modalWindow.classList.remove('open');
@@ -70,7 +78,9 @@ class FreeLesson{
             setTimeout(() => {
                 modalWindow.classList.remove('disappearance');
                 modalWindow.parentElement.classList.remove('disappearance');
-                ROOT_MODAL.innerHTML = ''
+                modalWindow.classList.add('hidden');
+                modalWindow.parentElement.classList.add('hidden');
+                // ROOT_MODAL.innerHTML = ''
             },300);
         };
     }; 
@@ -81,8 +91,12 @@ class FreeLesson{
         let form = document.getElementById('form-free-lesson');
         let container = document.getElementById('modal-container');
         this.maskForPhone()
-
-        form.addEventListener('submit', (event) => {
+        document.addEventListener('keydown', (event) => {
+            if(event.code == 'Escape') {
+                this.close();
+            };
+        });
+        form.addEventListener('submit',(event) => {
             event.preventDefault();
 
             let error = formValidate(form)
@@ -117,16 +131,19 @@ class FreeLesson{
                             setTimeout(() => {
                                 modalWindow.classList.remove('disappearance');
                                 modalWindow.parentElement.classList.remove('disappearance');
-                                ROOT_MODAL.innerHTML = ''
+                                modalWindow.classList.add('hidden');
+                                modalWindow.parentElement.classList.add('hidden');
+                                // ROOT_MODAL.innerHTML = ''
                             },300);
                         }; // дублирование кода
 
                     }
                 },1000)
             } else {
-                alert('Заполните обязательные поля')
+               alert('Заполните обязательные поля')
             }
         });
+        
 
         let formValidate = () =>{
             let error = 0;
@@ -162,9 +179,6 @@ class FreeLesson{
                 input.placeholder = 'Введите почтовый адрес'
             } else if(input.placeholder == '+7 (___)-___-__-__') {
                 input.placeholder = 'Введите номер телефона'}
-            else{
-                input.placeholder = 'Введите дату рождения'
-            }
         }
     }
 

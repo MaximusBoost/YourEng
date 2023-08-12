@@ -492,8 +492,38 @@
         </footer>
 
     </div>
+    <div class="modal hidden" id="modal-container" data-close="true">
+        <div class="modal__body hidden _container" >
+            <img src="../modal/freeLesson/img/Cancel.svg" alt="close" class="modal__close" data-close="true">
+            <div class="modal__container">
+                <h3 class="modal__title">Бесплатное пробное занятие</h3>
+                <form action="#" class="modal__form" id="form-free-lesson">
+                    <div class="modal__input-container">
+                        <input class="modal__input modal__input_name _modal-req" placeholder="Имя" data-input="true">
+                        <img src="../modal/freeLesson/img/Vector.svg" alt="star">
+                    </div>
+                    <div class="modal__input-container">
+                        <input class="modal__input modal__input_birthday _modal-req" placeholder="Введите дату рождения" data-input="true">
+                        <img src="../modal/freeLesson/img/Vector.svg" alt="star">
+                    </div>
+                    <div class="modal__input-container">
+                        <input class="modal__input modal__input_phone _modal-req" placeholder="+7 (___)-___-__-__" type="tel" data-input="true">
+                        <img src="../modal/freeLesson/img/Vector.svg" alt="star">
+                    </div>
+                    
+                    <div class="modal__input-container">
+                        <input class="modal__input modal__input_email _modal-req _modal-email" placeholder="example@mail.ru" type="email" data-input="true">
+                        <img src="../modal/freeLesson/img/Vector.svg" alt="star" data-input="true">
+                    </div>
 
-    <div id="ROOT_MODAL"></div>
+                    <textarea class="modal__input modal__input_textarea" placeholder="Сообщение" maxlength="140" data-input="true"></textarea>
+
+                    <p class="modal__paragraph"><img src="../modal/freeLesson/img/Vector.svg" alt="star"> Поля, обязательные для заполнения</p>
+                    <button class="modal__button _button-green">Записаться</button>
+                </form>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
 

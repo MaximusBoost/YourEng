@@ -692,7 +692,7 @@
                             <li>Что будет, если у меня не будет возможности во время пройти занятие?</li>
                             <img src="./components/teachers/img/Vector.svg" alt="vector" data-vector="true">
                         </div>
-                        <div class="questions__answer hidden">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, cumque magni. Sapiente molestiae exercitationem, ab veritatis cum dolor quos fuga maxime, quas, ipsa odit iure dignissimos reprehenderit aut cupiditate obcaecati!</div>
+                        <div class="questions__answer hidden__question">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, cumque magni. Sapiente molestiae exercitationem, ab veritatis cum dolor quos fuga maxime, quas, ipsa odit iure dignissimos reprehenderit aut cupiditate obcaecati!</div>
                     </div>
                     
 
@@ -701,7 +701,7 @@
                             <li>Что нужно для того, чтобы начать учить английский?</li>
                         <img src="./components/teachers/img/Vector.svg" alt="vector" data-vector="true">
                         </div>
-                        <div class="questions__answer hidden">В YourEng вы сами выбираете комфортный для себя график изучения языка. </div>
+                        <div class="questions__answer hidden__question">В YourEng вы сами выбираете комфортный для себя график изучения языка. </div>
                     </div>
                     
 
@@ -710,7 +710,7 @@
                             <li>Есть ли возможность подобрать свой график для занятий?</li>
                             <img src="./components/teachers/img/Vector.svg" alt="vector" data-vector="true">
                         </div>
-                        <div class="questions__answer hidden">В YourEng вы сами выбираете комфортный для себя график изучения языка. </div>
+                        <div class="questions__answer hidden__question">В YourEng вы сами выбираете комфортный для себя график изучения языка. </div>
                     </div>
                    
 
@@ -719,7 +719,7 @@
                             <li>Что включает в себя бесплатное занятие?</li>
                         <img src="./components/teachers/img/Vector.svg" alt="vector" data-vector="true">
                         </div>
-                        <div class="questions__answer hidden">В YourEng вы сами выбираете комфортный для себя график изучения языка. </div>
+                        <div class="questions__answer hidden__question">В YourEng вы сами выбираете комфортный для себя график изучения языка. </div>
                     </div>
                     
 
@@ -728,7 +728,7 @@
                             <li>Как происходит оплата?</li>
                         <img src="./components/teachers/img/Vector.svg" alt="vector" data-vector="true">
                         </div>
-                        <div class="questions__answer hidden">В YourEng вы сами выбираете комфортный для себя график изучения языка. </div>
+                        <div class="questions__answer hidden__question">В YourEng вы сами выбираете комфортный для себя график изучения языка. </div>
                     </div>
                     
 
@@ -737,7 +737,7 @@
                             <li>Как работает система отслеживания прогресса?</li>
                         <img src="./components/teachers/img/Vector.svg" alt="vector" data-vector="true">
                         </div>
-                        <div class="questions__answer hidden">В YourEng вы сами выбираете комфортный для себя график изучения языка. </div>
+                        <div class="questions__answer hidden__question">В YourEng вы сами выбираете комфортный для себя график изучения языка. </div>
                     </div>
                    
 
@@ -817,7 +817,38 @@
                 </div>
             </div>
         </footer>
-        <div id="ROOT_MODAL"></div>
+        <div class="modal hidden" id="modal-container" data-close="true">
+            <div class="modal__body hidden _container" >
+                <img src="./components/modal/freeLesson/img/Cancel.svg" alt="close" class="modal__close" data-close="true">
+                <div class="modal__container">
+                    <h3 class="modal__title">Бесплатное пробное занятие</h3>
+                    <form action="#" class="modal__form" id="form-free-lesson">
+                        <div class="modal__input-container">
+                            <input class="modal__input modal__input_name _modal-req" placeholder="Имя" data-input="true">
+                            <img src="./components/modal/freeLesson/img/Vector.svg" alt="star">
+                        </div>
+                        <div class="modal__input-container">
+                            <input class="modal__input modal__input_birthday _modal-req" placeholder="Введите дату рождения" data-input="true">
+                            <img src="./components/modal/freeLesson/img/Vector.svg" alt="star">
+                        </div>
+                        <div class="modal__input-container">
+                            <input class="modal__input modal__input_phone _modal-req" placeholder="+7 (___)-___-__-__" type="tel" data-input="true">
+                            <img src="./components/modal/freeLesson/img/Vector.svg" alt="star">
+                        </div>
+                        
+                        <div class="modal__input-container">
+                            <input class="modal__input modal__input_email _modal-req _modal-email" placeholder="example@mail.ru" type="email" data-input="true">
+                            <img src="./components/modal/freeLesson/img/Vector.svg" alt="star" data-input="true">
+                        </div>
+
+                        <textarea class="modal__input modal__input_textarea" placeholder="Сообщение" maxlength="140" data-input="true"></textarea>
+
+                        <p class="modal__paragraph"><img src="./components/modal/freeLesson/img/Vector.svg" alt="star"> Поля, обязательные для заполнения</p>
+                        <button class="modal__button _button-green">Записаться</button>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
     <script src="./index.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
